@@ -1,4 +1,4 @@
-# Created at 2025-05-29T19:56:17.172
+# Created at 2025-05-29T22:26:24.638
 java.lang.RuntimeException: Unable to create test class 'com.praxii.backend.._BackendApplicationTests'
 	at org.apache.maven.surefire.api.util.DefaultScanResult.loadClass(DefaultScanResult.java:117)
 	at org.apache.maven.surefire.api.util.DefaultScanResult.applyFilter(DefaultScanResult.java:85)
