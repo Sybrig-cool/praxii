@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
   mongodb:
@@ -12,3 +12,21 @@ services:
       MONGO_INITDB_ROOT_USERNAME: praxiidbuser
       MONGO_INITDB_ROOT_PASSWORD: securepassword123
 
+  backend:
+    build: ./backend
+    container_name: praxii-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - MONGO_URL=mongodb://praxiidbuser:securepassword123@mongodb:27017/praxii?authSource=admin
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./frontend
+    container_name: praxii-frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
