@@ -1,0 +1,14 @@
+# Ignore macOS metadata files
+.DS_Store
+._*
+
+# Ignore build artifacts
+dist/
+node_modules/
+npm-debug.log
+.angular/cache/
+coverage/
+
+# Optional: ignore sensitive or redundant files
+.env
+.env.*
