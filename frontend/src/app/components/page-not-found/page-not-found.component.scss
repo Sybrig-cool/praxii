@@ -1,0 +1,44 @@
+/* src/app/components/page-not-found/page-not-found.component.css */
+.pnf-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    min-height: calc(100vh - 160px); /* Adjust if you have fixed header/footer */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .pnf-container h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #007bff; /* Or your primary theme color */
+    margin-bottom: 0;
+  }
+  
+  .pnf-container h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .pnf-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-bottom: 15px;
+  }
+  
+  .pnf-container a {
+    color: #007bff; /* Or your primary theme color */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .pnf-container a:hover {
+    text-decoration: underline;
+  }
+  
