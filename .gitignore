@@ -1,3 +1,16 @@
+# Node modules
+frontend/node_modules/
+# Build outputs
+frontend/dist/
+backend/target/
+# IDE
+*.iml
+.idea/
+.vscode/
+# Environment files
+.env
+# OS
+.DS_Store
+Thumbs.db
+# Docker volumes
 mongodb_data/
-node_modules/
-*.log
