@@ -14,3 +14,4 @@ backend/target/
 Thumbs.db
 # Docker volumes
 mongodb_data/
+._*
