@@ -5,6 +5,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,11 +33,12 @@ public class JournalController {
     private JournalRepository journalRepository;
     @Autowired
     private UserRepository userRepository;
+    private static final Logger log = LoggerFactory.getLogger(JournalController.class);
 
     // Create new journal entry
    @PostMapping
     public ResponseEntity<?> createJournal(@RequestBody JournalRequest request, Principal principal) {
-         System.out.println(">>>> Entered createJournal endpoint <<<<");
+        log.info("Entered createJournal endpoint");
     // Find the user by username
     User user = userRepository.findByUsername(principal.getName())
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED));
@@ -45,8 +49,8 @@ public class JournalController {
     journal.setContent(request.getContent());
     journal.setCreatedAt(LocalDateTime.now());
 
-    journalRepository.save(journal);
-    System.out.println("Saved journal for user: " + user.getId() + " " + user.getUsername() + " at " + journal.getCreatedAt());
+        journalRepository.save(journal);
+        log.info("Saved journal for user: {} {} at {}", user.getId(), user.getUsername(), journal.getCreatedAt());
 
     return ResponseEntity.ok("Journal saved");
 }
