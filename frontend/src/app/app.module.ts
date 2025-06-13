@@ -8,13 +8,16 @@ import { HealthCheckComponent } from './health-check/health-check.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { AuthInterceptor } from './auth/auth.interceptor';
+import { JournalComponent } from './journal/journal.component';
+import { JwtInterceptor } from './auth/jwt-interceptor';
+
 @NgModule({
   declarations: [
     AppComponent,
     HealthCheckComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    JournalComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     FormsModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
