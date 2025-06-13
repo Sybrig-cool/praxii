@@ -24,8 +24,8 @@ export class LoginComponent {
       next: (res) => {
         this.authService.saveToken(res.token);
         this.loading = false;
-        // Optionally navigate to dashboard or home after login
-        this.router.navigate(['/dashboard']);
+        // Optionally navigate to the login page (home) after login
+        this.router.navigate(['/login']);
       },
       error: (err) => {
         this.error = err.error || 'Login failed.';
