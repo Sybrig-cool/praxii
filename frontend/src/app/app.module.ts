@@ -5,9 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HealthCheckComponent } from './health-check/health-check.component';
-import { HttpClientModule } from '@angular/common/http';  
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { AuthInterceptor } from './auth/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,9 @@ import { SignupComponent } from './auth/signup/signup.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
