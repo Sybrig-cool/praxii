@@ -1,0 +1,12 @@
+<h2>Your Journal</h2>
+<form (ngSubmit)="create()" #journalForm="ngForm">
+  <textarea name="content" [(ngModel)]="content" required></textarea>
+  <br>
+  <button type="submit" [disabled]="loading">Add Entry</button>
+</form>
+
+<ul>
+  <li *ngFor="let journal of journals">
+    <strong>{{ journal.createdAt | date:'short' }}</strong> - {{ journal.content }}
+  </li>
+</ul>
