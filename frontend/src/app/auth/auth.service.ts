@@ -27,6 +27,25 @@ export class AuthService {
     return localStorage.getItem('jwt');
   }
 
+  isTokenValid(): boolean {
+    const token = this.getToken();
+    if (!token) return false;
+    
+    try {
+      // Basic JWT structure check
+      const parts = token.split('.');
+      if (parts.length !== 3) return false;
+      
+      // Decode payload to check expiration
+      const payload = JSON.parse(atob(parts[1]));
+      const exp = payload.exp * 1000; // Convert to milliseconds
+      return Date.now() < exp;
+    } catch (e) {
+      console.error('Invalid JWT token format:', e);
+      return false;
+    }
+  }
+
   logout() {
     localStorage.removeItem('jwt');
   }
