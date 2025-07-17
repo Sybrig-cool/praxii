@@ -1,18 +1,129 @@
-<h2>Your Journal</h2>
-<div style="text-align: right; margin-bottom: 10px;">
-  <button (click)="logout()" style="background-color: #f44336; color: white; border: none; padding: 5px 10px; cursor: pointer;">Logout</button>
+<div class="journal-container fade-in">
+  <!-- Header Section -->
+  <div class="journal-header">
+    <div class="header-content">
+      <div class="welcome-section">
+        <h1 class="page-title">
+          <span class="title-icon">📖</span>
+          My Journal
+        </h1>
+        <p class="page-subtitle">Capture your thoughts and memories</p>
+      </div>
+      <button (click)="logout()" class="btn btn-danger logout-btn">
+        <span class="btn-icon">👋</span>
+        Logout
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="journal-content">
+    <!-- Create Entry Section -->
+    <div class="create-entry-section">
+      <div class="card entry-card">
+        <div class="card-header">
+          <h3 class="section-title">
+            <span class="section-icon">✍️</span>
+            New Entry
+          </h3>
+        </div>
+        
+        <div class="card-body">
+          <form (ngSubmit)="create()" #journalForm="ngForm" class="entry-form">
+            <div class="form-group">
+              <textarea 
+                name="content" 
+                [(ngModel)]="content" 
+                required 
+                placeholder="What's on your mind today? Share your thoughts, experiences, or reflections..." 
+                class="form-input form-textarea entry-textarea"
+              ></textarea>
+            </div>
+            
+            <div class="form-actions">
+              <button 
+                type="submit" 
+                [disabled]="loading || !content.trim()" 
+                class="btn btn-primary create-btn"
+                [class.loading]="loading"
+              >
+                <span *ngIf="!loading">
+                  <span class="btn-icon">💫</span>
+                  Save Entry
+                </span>
+                <span *ngIf="loading">Saving...</span>
+              </button>
+              
+              <div class="word-count" *ngIf="content">
+                {{ content.trim().split(' ').length }} words
+              </div>
+            </div>
+          </form>
+
+          <!-- Messages -->
+          <div *ngIf="message" class="alert alert-success">
+            <span class="alert-icon">🎉</span>
+            {{ message }}
+          </div>
+
+          <div *ngIf="error" class="alert alert-error">
+            <span class="alert-icon">⚠️</span>
+            {{ error }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Entries Section -->
+    <div class="entries-section">
+      <!-- Empty State -->
+      <div *ngIf="journals.length === 0 && !loading" class="empty-state">
+        <div class="empty-icon">📝</div>
+        <h3 class="empty-title">Your Journal Awaits</h3>
+        <p class="empty-message">
+          Start documenting your journey by creating your first entry above.
+          Every great story begins with a single word.
+        </p>
+      </div>
+
+      <!-- Loading State -->
+      <div *ngIf="loading" class="loading-state">
+        <div class="loading-spinner"></div>
+        <p>Loading your entries...</p>
+      </div>
+
+      <!-- Journal Entries -->
+      <div class="entries-grid" *ngIf="journals.length > 0">
+        <div 
+          *ngFor="let journal of journals; let i = index" 
+          class="entry-card-wrapper"
+          [style.animation-delay]="(i * 0.1) + 's'"
+        >
+          <div class="card entry-item slide-in">
+            <div class="entry-header">
+              <div class="entry-date">
+                <span class="date-icon">📅</span>
+                {{ journal.createdAt | date:'fullDate' }}
+              </div>
+              <div class="entry-time">
+                {{ journal.createdAt | date:'shortTime' }}
+              </div>
+            </div>
+            
+            <div class="entry-content">
+              <p class="entry-text">{{ journal.content }}</p>
+            </div>
+            
+            <div class="entry-footer">
+              <div class="entry-stats">
+                <span class="word-count-badge">
+                  {{ journal.content.split(' ').length }} words
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<form (ngSubmit)="create()" #journalForm="ngForm">
-  <textarea name="content" [(ngModel)]="content" required placeholder="Write your journal entry here..."></textarea>
-  <br>
-  <button type="submit" [disabled]="loading">{{ loading ? 'Adding...' : 'Add Entry' }}</button>
-</form>
-
-<div *ngIf="message" style="color: green; margin: 10px 0;">{{ message }}</div>
-<div *ngIf="error" style="color: red; margin: 10px 0;">{{ error }}</div>
-
-<ul>
-  <li *ngFor="let journal of journals">
-    <strong>{{ journal.createdAt | date:'short' }}</strong> - {{ journal.content }}
-  </li>
-</ul>

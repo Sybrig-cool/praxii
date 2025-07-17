@@ -65,6 +65,7 @@ export class JournalComponent implements OnInit {
 
   create(): void {
     if (!this.content.trim()) {
+      this.error = 'Please enter some content for your journal entry.';
       return;
     }
     
@@ -85,29 +86,44 @@ export class JournalComponent implements OnInit {
       return;
     }
     
-    console.log('Creating journal with token present...');
+    console.log('Creating journal with content:', this.content);
+    console.log('Token present:', !!token);
     this.loading = true;
     this.error = '';
     this.message = '';
+    
     this.journalService.createJournal(this.content).subscribe({
-      next: () => {
+      next: (response) => {
+        console.log('Journal creation response:', response);
         this.content = '';
         this.loading = false;
         this.message = 'Journal entry created successfully!';
         this.loadJournals();
+        
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          this.message = '';
+        }, 5000);
       },
       error: (err) => {
         this.loading = false;
         console.error('Journal creation error:', err);
+        console.error('Error status:', err.status);
+        console.error('Error body:', err.error);
         
         if (err.status === 0) {
-          this.error = 'Failed to create journal: Cannot connect to server. Please check if you are logged in.';
+          this.error = 'Failed to create journal: Cannot connect to server. Please check your connection and try again.';
         } else if (err.status === 401) {
           this.error = 'Failed to create journal: Authentication failed. Please login again.';
+          this.authService.logout();
+          this.router.navigate(['/login']);
         } else if (err.status === 403) {
           this.error = 'Failed to create journal: Access denied. Please login again.';
+          this.authService.logout();
+          this.router.navigate(['/login']);
         } else {
-          this.error = 'Failed to create journal: ' + (err.error || err.message || `Error ${err.status}`);
+          const errorMessage = err.error?.message || err.message || `HTTP Error ${err.status}`;
+          this.error = 'Failed to create journal: ' + errorMessage;
         }
       }
     });

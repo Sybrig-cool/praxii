@@ -1,22 +1,100 @@
-<h2>Sign Up</h2>
-<form (ngSubmit)="onSubmit()" #signupForm="ngForm">
-  <label>
-    Username:
-    <input name="username" [(ngModel)]="username" required>
-  </label>
-  <br>
-  <label>
-    Email:
-    <input name="email" [(ngModel)]="email" required type="email">
-  </label>
-  <br>
-  <label>
-    Password:
-    <input name="password" [(ngModel)]="password" required type="password">
-  </label>
-  <br>
-  <button type="submit" [disabled]="loading">Sign Up</button>
-</form>
+<div class="signup-container fade-in">
+  <div class="signup-card card">
+    <div class="card-header text-center">
+      <div class="welcome-icon">✨</div>
+      <h2 class="signup-title">Join Praxii Journal</h2>
+      <p class="signup-subtitle">Start your journaling journey today</p>
+    </div>
+    
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #signupForm="ngForm" class="signup-form">
+        <div class="form-group">
+          <label class="form-label">
+            <span class="label-icon">👤</span>
+            Username
+          </label>
+          <input 
+            name="username" 
+            [(ngModel)]="username" 
+            required 
+            class="form-input"
+            placeholder="Choose a unique username"
+            autocomplete="username"
+          >
+        </div>
 
-<div *ngIf="message" style="color: green;">{{ message }}</div>
-<div *ngIf="error" style="color: red;">{{ error }}</div>
+        <div class="form-group">
+          <label class="form-label">
+            <span class="label-icon">📧</span>
+            Email Address
+          </label>
+          <input 
+            name="email" 
+            [(ngModel)]="email" 
+            required 
+            type="email" 
+            class="form-input"
+            placeholder="Enter your email address"
+            autocomplete="email"
+          >
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">
+            <span class="label-icon">🔒</span>
+            Password
+          </label>
+          <input 
+            name="password" 
+            [(ngModel)]="password" 
+            required 
+            type="password" 
+            class="form-input"
+            placeholder="Create a secure password"
+            autocomplete="new-password"
+          >
+        </div>
+        
+        <button 
+          type="submit" 
+          [disabled]="loading || !username || !email || !password" 
+          class="btn btn-primary w-full"
+          [class.loading]="loading"
+        >
+          <span *ngIf="!loading">
+            <span class="btn-icon">🎉</span>
+            Create Account
+          </span>
+          <span *ngIf="loading">Creating account...</span>
+        </button>
+      </form>
+
+      <div *ngIf="message" class="alert alert-success">
+        <span class="alert-icon">✅</span>
+        {{ message }}
+      </div>
+
+      <div *ngIf="error" class="alert alert-error">
+        <span class="alert-icon">⚠️</span>
+        {{ error }}
+      </div>
+    </div>
+    
+    <div class="card-footer">
+      <div class="login-prompt">
+        <p>Already have an account?</p>
+        <a routerLink="/login" class="login-link">
+          Sign in here
+          <span class="link-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Decorative Elements -->
+  <div class="bg-decoration">
+    <div class="decoration-circle circle-1"></div>
+    <div class="decoration-circle circle-2"></div>
+    <div class="decoration-circle circle-3"></div>
+  </div>
+</div>
