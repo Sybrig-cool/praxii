@@ -1,9 +1,15 @@
 <h2>Your Journal</h2>
+<div style="text-align: right; margin-bottom: 10px;">
+  <button (click)="logout()" style="background-color: #f44336; color: white; border: none; padding: 5px 10px; cursor: pointer;">Logout</button>
+</div>
 <form (ngSubmit)="create()" #journalForm="ngForm">
-  <textarea name="content" [(ngModel)]="content" required></textarea>
+  <textarea name="content" [(ngModel)]="content" required placeholder="Write your journal entry here..."></textarea>
   <br>
-  <button type="submit" [disabled]="loading">Add Entry</button>
+  <button type="submit" [disabled]="loading">{{ loading ? 'Adding...' : 'Add Entry' }}</button>
 </form>
+
+<div *ngIf="message" style="color: green; margin: 10px 0;">{{ message }}</div>
+<div *ngIf="error" style="color: red; margin: 10px 0;">{{ error }}</div>
 
 <ul>
   <li *ngFor="let journal of journals">
