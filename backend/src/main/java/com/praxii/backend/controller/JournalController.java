@@ -3,6 +3,7 @@ package com.praxii.backend.controller;
 import java.security.Principal;
 import java.time.Instant;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -52,7 +53,7 @@ public class JournalController {
         journalRepository.save(journal);
         log.info("Saved journal for user: {} {} at {}", user.getId(), user.getUsername(), journal.getCreatedAt());
 
-    return ResponseEntity.ok("Journal saved");
+    return ResponseEntity.ok(Map.of("message", "Journal saved", "success", true));
 }
 
 
