@@ -1,7 +1,7 @@
 package com.praxii.backend.controller;
 
 import java.security.Principal;
-import java.time.LocalDateTime;
+import java.time.Instant;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -47,7 +47,7 @@ public class JournalController {
     Journal journal = new Journal();
     journal.setUserId(user.getId());
     journal.setContent(request.getContent());
-    journal.setCreatedAt(LocalDateTime.now());
+    journal.setCreatedAt(Instant.now());
 
         journalRepository.save(journal);
         log.info("Saved journal for user: {} {} at {}", user.getId(), user.getUsername(), journal.getCreatedAt());

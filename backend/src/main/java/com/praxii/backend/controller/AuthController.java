@@ -64,7 +64,7 @@ public class AuthController {
     //     private final String email;
     // }
 
-static class SignupRequest {
+public static class SignupRequest {
     private String username;
     private String email;
     private String password;
@@ -81,7 +81,7 @@ static class SignupRequest {
     public void setPassword(String password) { this.password = password; }
 }
 
-static class LoginRequest {
+public static class LoginRequest {
     private String email;
     private String password;
 
@@ -94,7 +94,7 @@ static class LoginRequest {
     public void setPassword(String password) { this.password = password; }
 }
 
-static class JwtResponse {
+public static class JwtResponse {
     private String token;
     private String username;
     private String email;

@@ -1,15 +1,15 @@
 package com.praxii.backend.dto;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 public class JournalResponse {
     private String id;
     private String content;
-    private LocalDateTime createdAt;
+    private Instant createdAt;
 
     public JournalResponse() {}
 
-    public JournalResponse(String id, String content, LocalDateTime createdAt) {
+    public JournalResponse(String id, String content, Instant createdAt) {
         this.id = id;
         this.content = content;
         this.createdAt = createdAt;
@@ -21,6 +21,6 @@ public class JournalResponse {
     public String getContent() { return content; }
     public void setContent(String content) { this.content = content; }
 
-    public LocalDateTime getCreatedAt() { return createdAt; }
-    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+    public Instant getCreatedAt() { return createdAt; }
+    public void setCreatedAt(Instant createdAt) { this.createdAt = createdAt; }
 }

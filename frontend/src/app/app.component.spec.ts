@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('temp');
   });
 
-  it('should render title', () => {
+  it('should render navigation', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('temp app is running!');
+    expect(compiled.querySelector('nav')).toBeTruthy();
   });
 });

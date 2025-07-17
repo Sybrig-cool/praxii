@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { HealthCheckComponent } from './health-check.component';
 
@@ -8,7 +9,8 @@ describe('HealthCheckComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HealthCheckComponent ]
+      declarations: [ HealthCheckComponent ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
 

@@ -26,8 +26,6 @@ export class LoginComponent {
         this.loading = false;
         // Navigate to the dashboard after a successful login
         this.router.navigate(['/dashboard']);
-        // Optionally navigate to the login page (home) after login
-        this.router.navigate(['/login']);
       },
       error: (err) => {
         this.error = err.error || 'Login failed.';

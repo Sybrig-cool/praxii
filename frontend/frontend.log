@@ -1,0 +1,27 @@
+
+> praxii-frontend@0.0.0 start
+> ng serve
+
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   2.42 MB |
+polyfills.js          | polyfills     | 238.07 kB |
+styles.css, styles.js | styles        | 132.54 kB |
+main.js               | main          |  40.07 kB |
+runtime.js            | runtime       |   6.49 kB |
+
+| Initial Total |   2.82 MB
+
+Build at: 2025-07-17T19:27:47.728Z - Hash: fe5766dd3a3aa026 - Time: 6693ms
+
+Warning: /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/environments/environment.prod.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+
+
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+✔ Compiled successfully.
