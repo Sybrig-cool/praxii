@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class SignupComponent {
 
   loading = false;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   onSubmit() {
     this.loading = true;
@@ -26,8 +27,12 @@ export class SignupComponent {
       password: this.password
     }).subscribe({
       next: res => {
-        this.message = 'Signup successful! Please log in.';
+        this.message = 'Signup successful! Redirecting to login...';
         this.loading = false;
+        // Redirect to login after 2 seconds
+        setTimeout(() => {
+          this.router.navigate(['/login']);
+        }, 2000);
       },
       error: err => {
         this.error = err.error || 'Signup failed.';

@@ -25,3 +25,36 @@ Add only entry points to the 'files' or 'include' properties in your tsconfig.
 
 
 ✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 40.07 kB |
+runtime.js          | runtime |  6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-17T19:47:18.584Z - Hash: cb7c06cc51b9977b - Time: 1627ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 40.34 kB |
+runtime.js          | runtime |  6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-17T19:49:25.277Z - Hash: 60d629087a071e69 - Time: 1436ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 40.51 kB |
+runtime.js          | runtime |  6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-17T19:49:34.245Z - Hash: d12d14875d765707 - Time: 340ms
+
+✔ Compiled successfully.

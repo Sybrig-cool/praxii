@@ -53,3 +53,5 @@
 2025-07-17T14:29:31.005-05:00  INFO 9907 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-17T14:29:31.008-05:00  INFO 9907 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-07-17T14:29:31.026-05:00  INFO 9907 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2025-07-17T14:50:20.949-05:00  INFO 9907 --- [io-8080-exec-10] c.p.b.controller.JournalController       : Entered createJournal endpoint
+2025-07-17T14:50:21.503-05:00  INFO 9907 --- [io-8080-exec-10] c.p.b.controller.JournalController       : Saved journal for user: 687953e654b973e69d58d360 testuser at 2025-07-17T19:50:20.965884Z
