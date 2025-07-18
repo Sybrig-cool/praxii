@@ -1,0 +1,253 @@
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3 mb-0">
+          <i class="bi bi-moon-stars me-2"></i>Dream Journal
+        </h1>
+        <div class="text-muted" *ngIf="dreamStats">
+          Total Dreams: {{ dreamStats.totalDreams }}
+        </div>
+      </div>
+
+      <!-- Alerts -->
+      <div *ngIf="error" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <i class="bi bi-exclamation-triangle me-2"></i>{{ error }}
+        <button type="button" class="btn-close" (click)="error = ''" aria-label="Close"></button>
+      </div>
+
+      <div *ngIf="message" class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="bi bi-check-circle me-2"></i>{{ message }}
+        <button type="button" class="btn-close" (click)="message = ''" aria-label="Close"></button>
+      </div>
+
+      <!-- Dream Form -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h5 class="card-title mb-0">
+            <i class="bi bi-plus-circle me-2"></i>
+            {{ isEditMode ? 'Edit Dream' : 'Record New Dream' }}
+          </h5>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()" #dreamFormRef="ngForm">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="dreamDate" class="form-label">Dream Date *</label>
+                <input 
+                  type="date" 
+                  id="dreamDate" 
+                  name="dreamDate"
+                  class="form-control" 
+                  [(ngModel)]="dreamForm.dreamDate" 
+                  required
+                  [max]="maxDate"
+                >
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="dreamType" class="form-label">Dream Type *</label>
+                <select 
+                  id="dreamType" 
+                  name="dreamType"
+                  class="form-select" 
+                  [(ngModel)]="dreamForm.dreamType" 
+                  required
+                >
+                  <option *ngFor="let type of dreamTypes" [value]="type">
+                    {{ getDreamTypeDisplayName(type) }}
+                  </option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="title" class="form-label">Dream Title *</label>
+              <input 
+                type="text" 
+                id="title" 
+                name="title"
+                class="form-control" 
+                [(ngModel)]="dreamForm.title" 
+                placeholder="Give your dream a title..."
+                maxlength="200"
+                required
+              >
+              <div class="form-text">{{ dreamForm.title.length }}/200 characters</div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="description" class="form-label">Dream Description *</label>
+              <textarea 
+                id="description" 
+                name="description"
+                class="form-control" 
+                rows="5"
+                [(ngModel)]="dreamForm.description" 
+                placeholder="Describe your dream in detail..."
+                maxlength="5000"
+                required
+              ></textarea>
+              <div class="form-text">{{ dreamForm.description.length }}/5000 characters</div>
+            </div>
+            
+            <div class="d-flex gap-2">
+              <button 
+                type="submit" 
+                class="btn btn-primary"
+                [disabled]="loading || !dreamFormRef.form.valid"
+              >
+                <span *ngIf="loading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                <i *ngIf="!loading" class="bi bi-save me-2"></i>
+                {{ isEditMode ? 'Update Dream' : 'Save Dream' }}
+              </button>
+              
+              <button 
+                *ngIf="isEditMode" 
+                type="button" 
+                class="btn btn-secondary"
+                (click)="resetForm()"
+              >
+                <i class="bi bi-x-circle me-2"></i>Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h6 class="card-title">
+            <i class="bi bi-funnel me-2"></i>Filter Dreams
+          </h6>
+          <div class="row g-3">
+            <div class="col-md-3">
+              <label for="filterType" class="form-label">Dream Type</label>
+              <select 
+                id="filterType" 
+                class="form-select form-select-sm" 
+                [(ngModel)]="filters.dreamType"
+                (change)="applyFilters()"
+              >
+                <option value="">All Types</option>
+                <option *ngFor="let type of dreamTypes" [value]="type">
+                  {{ getDreamTypeDisplayName(type) }}
+                </option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="filterStartDate" class="form-label">From Date</label>
+              <input 
+                type="date" 
+                id="filterStartDate" 
+                class="form-control form-control-sm" 
+                [(ngModel)]="filters.startDate"
+                (change)="applyFilters()"
+              >
+            </div>
+            <div class="col-md-3">
+              <label for="filterEndDate" class="form-label">To Date</label>
+              <input 
+                type="date" 
+                id="filterEndDate" 
+                class="form-control form-control-sm" 
+                [(ngModel)]="filters.endDate"
+                (change)="applyFilters()"
+              >
+            </div>
+            <div class="col-md-3">
+              <label for="filterSearch" class="form-label">Search</label>
+              <input 
+                type="text" 
+                id="filterSearch" 
+                class="form-control form-control-sm" 
+                [(ngModel)]="filters.search"
+                placeholder="Search titles..."
+                (input)="applyFilters()"
+              >
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-12">
+              <button type="button" class="btn btn-outline-secondary btn-sm" (click)="clearFilters()">
+                <i class="bi bi-x-circle me-1"></i>Clear Filters
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dreams List -->
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title mb-0">
+            <i class="bi bi-journal-text me-2"></i>Your Dreams
+          </h5>
+        </div>
+        <div class="card-body">
+          <!-- Loading -->
+          <div *ngIf="loading && dreams.length === 0" class="text-center py-4">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-2 text-muted">Loading dreams...</p>
+          </div>
+
+          <!-- No Dreams -->
+          <div *ngIf="!loading && dreams.length === 0" class="text-center py-5">
+            <i class="bi bi-moon-stars display-1 text-muted"></i>
+            <h5 class="mt-3 text-muted">No dreams recorded yet</h5>
+            <p class="text-muted">Start by recording your first dream above!</p>
+          </div>
+
+          <!-- Dreams Grid -->
+          <div *ngIf="dreams.length > 0" class="row">
+            <div *ngFor="let dream of dreams" class="col-lg-6 col-xl-4 mb-4">
+              <div class="card h-100 dream-card">
+                <div class="card-header d-flex justify-content-between align-items-start">
+                  <div>
+                    <h6 class="card-title mb-1">{{ dream.title }}</h6>
+                    <small class="text-muted">
+                      <i class="bi bi-calendar3 me-1"></i>{{ formatDate(dream.dreamDate) }}
+                    </small>
+                  </div>
+                  <span class="badge" [class]="'bg-' + getDreamTypeBadgeColor(dream.dreamType)">
+                    {{ getDreamTypeDisplayName(dream.dreamType) }}
+                  </span>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">{{ dream.description }}</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">
+                      <i class="bi bi-clock me-1"></i>{{ formatDateTime(dream.createdAt!) }}
+                    </small>
+                    <div class="btn-group btn-group-sm">
+                      <button 
+                        type="button" 
+                        class="btn btn-outline-primary"
+                        (click)="editDream(dream)"
+                        title="Edit Dream"
+                      >
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button 
+                        type="button" 
+                        class="btn btn-outline-danger"
+                        (click)="deleteDream(dream)"
+                        title="Delete Dream"
+                      >
+                        <i class="bi bi-trash"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

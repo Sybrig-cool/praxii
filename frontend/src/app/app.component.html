@@ -24,8 +24,28 @@
             </li>
           </ul>
           
-          <!-- Show user info and logout when logged in -->
+          <!-- Show navigation when logged in -->
           <div *ngIf="authService.isLoggedIn()" class="d-flex align-items-center">
+            <!-- Navigation Links -->
+            <ul class="navbar-nav me-4">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+                  <i class="bi bi-journal-text me-1"></i>Journal
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/dreams" routerLinkActive="active">
+                  <i class="bi bi-moon-stars me-1"></i>Dreams
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/archive" routerLinkActive="active">
+                  <i class="bi bi-archive me-1"></i>Archive
+                </a>
+              </li>
+            </ul>
+            
+            <!-- User Info and Logout -->
             <span class="text-muted me-3">
               <i class="bi bi-person-circle me-2"></i>
               Welcome, <strong>{{ authService.getUsername() }}</strong>

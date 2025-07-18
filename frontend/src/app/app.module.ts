@@ -13,6 +13,7 @@ import { JournalComponent } from './journal/journal.component';
 import { JwtInterceptor } from './auth/jwt-interceptor';
 import { EmailVerificationComponent } from './auth/email-verification/email-verification.component';
 import { JournalArchiveComponent } from './journal/journal-archive/journal-archive.component';
+import { DreamComponent } from './dream/dream.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { JournalArchiveComponent } from './journal/journal-archive/journal-archi
     SignupComponent,
     JournalComponent,
     EmailVerificationComponent,
-    JournalArchiveComponent
+    JournalArchiveComponent,
+    DreamComponent
   ],
   imports: [
     BrowserModule,

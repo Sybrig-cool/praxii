@@ -1,7 +1,3 @@
-
-> praxii-frontend@0.0.0 start
-> ng serve
-
 - Generating browser application bundles (phase: setup)...
 ✔ Browser application bundle generation complete.
 
@@ -9,107 +5,694 @@ Initial Chunk Files   | Names         |  Raw Size
 vendor.js             | vendor        |   2.42 MB |
 polyfills.js          | polyfills     | 238.07 kB |
 styles.css, styles.js | styles        | 132.54 kB |
-main.js               | main          |  47.74 kB |
+main.js               | main          | 107.54 kB |
 runtime.js            | runtime       |   6.49 kB |
 
-| Initial Total |   2.83 MB
+| Initial Total |   2.89 MB
 
-Build at: 2025-07-17T20:49:27.098Z - Hash: 3d7d8823a4195d74 - Time: 4152ms
+Build at: 2025-07-18T17:08:02.975Z - Hash: a3fcf410e65d1bb5 - Time: 6511ms
 
-Warning: /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/environments/environment.prod.ts is part of the TypeScript compilation but it's unused.
-Add only entry points to the 'files' or 'include' properties in your tsconfig.
+Error: src/app/journal/journal.component.ts:21:24 - error TS2339: Property 'authService' does not exist on type 'JournalComponent'.
+
+21     const token = this.authService.getToken();
+                          ~~~~~~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:25:12 - error TS2339: Property 'router' does not exist on type 'JournalComponent'.
+
+25       this.router.navigate(['/login']);
+              ~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:29:15 - error TS2339: Property 'authService' does not exist on type 'JournalComponent'.
+
+29     if (!this.authService.isTokenValid()) {
+                 ~~~~~~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:32:12 - error TS2339: Property 'authService' does not exist on type 'JournalComponent'.
+
+32       this.authService.logout();
+              ~~~~~~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:33:12 - error TS2339: Property 'router' does not exist on type 'JournalComponent'.
+
+33       this.router.navigate(['/login']);
+              ~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:69:24 - error TS2339: Property 'authService' does not exist on type 'JournalComponent'.
+
+69     const token = this.authService.getToken();
+                          ~~~~~~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:73:12 - error TS2339: Property 'router' does not exist on type 'JournalComponent'.
+
+73       this.router.navigate(['/login']);
+              ~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:77:15 - error TS2339: Property 'authService' does not exist on type 'JournalComponent'.
+
+77     if (!this.authService.isTokenValid()) {
+                 ~~~~~~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:80:12 - error TS2339: Property 'authService' does not exist on type 'JournalComponent'.
+
+80       this.authService.logout();
+              ~~~~~~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:81:12 - error TS2339: Property 'router' does not exist on type 'JournalComponent'.
+
+81       this.router.navigate(['/login']);
+              ~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:114:16 - error TS2339: Property 'authService' does not exist on type 'JournalComponent'.
+
+114           this.authService.logout();
+                   ~~~~~~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:115:16 - error TS2339: Property 'router' does not exist on type 'JournalComponent'.
+
+115           this.router.navigate(['/login']);
+                   ~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:118:16 - error TS2339: Property 'authService' does not exist on type 'JournalComponent'.
+
+118           this.authService.logout();
+                   ~~~~~~~~~~~
+
+
+Error: src/app/journal/journal.component.ts:119:16 - error TS2339: Property 'router' does not exist on type 'JournalComponent'.
+
+119           this.router.navigate(['/login']);
+                   ~~~~~~
+
 
 
 
 ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
 
 
-✔ Compiled successfully.
+✖ Failed to compile.
 ✔ Browser application bundle generation complete.
 
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 47.84 kB |
-runtime.js          | runtime |  6.49 kB |
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 108.00 kB |
+runtime.js          | runtime |   6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T21:33:03.658Z - Hash: 3254c179560c56b1 - Time: 6024ms
+Build at: 2025-07-18T17:08:57.601Z - Hash: 1db480dfb4ceb74d - Time: 771ms
 
-Error: src/app/journal/journal.component.html:3:20 - error TS2339: Property 'logout' does not exist on type 'JournalComponent'.
-
-3   <button (click)="logout()" style="background-color: #f44336; color: white; border: none; padding: 5px 10px; cursor: pointer;">Logout</button>
-                     ~~~~~~
-
-  src/app/journal/journal.component 2.ts:6:16
-    6   templateUrl: './journal.component.html'
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Error occurs in the template of component JournalComponent.
+Warning: /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/environments/environment.prod.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
 
 
-Error: src/app/journal/journal.component.html:5:43 - error NG8003: No directive found with exportAs 'ngForm'.
 
-5 <form (ngSubmit)="create()" #journalForm="ngForm">
-                                            ~~~~~~
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
 
-  src/app/journal/journal.component 2.ts:6:16
-    6   templateUrl: './journal.component.html'
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Error occurs in the template of component JournalComponent.
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 109.59 kB |
+runtime.js          | runtime |   6.49 kB |
 
+3 unchanged chunks
 
-Error: src/app/journal/journal.component.html:6:28 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'textarea'.
+Build at: 2025-07-18T22:08:30.243Z - Hash: 483472dc53b8ca23 - Time: 1078ms
 
-6   <textarea name="content" [(ngModel)]="content" required placeholder="Write your journal entry here..."></textarea>
-                             ~~~~~~~~~~~~~~~~~~~~~
-
-  src/app/journal/journal.component 2.ts:6:16
-    6   templateUrl: './journal.component.html'
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Error occurs in the template of component JournalComponent.
+Warning: /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream.service.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
 
 
-Error: src/app/journal/journal.component.html:6:41 - error TS2322: Type 'Event' is not assignable to type 'string'.
 
-6   <textarea name="content" [(ngModel)]="content" required placeholder="Write your journal entry here..."></textarea>
-                                          ~~~~~~~~~~~~~~~
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
 
-  src/app/journal/journal.component 2.ts:6:16
-    6   templateUrl: './journal.component.html'
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Error occurs in the template of component JournalComponent.
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 120.95 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:08:54.490Z - Hash: ed1ae8c65466c568 - Time: 298ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 119.99 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:09:29.423Z - Hash: 81c46cc0eb75ff61 - Time: 413ms
+
+Error: src/app/dream/dream.component.html:44:26 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+44                   [max]="new Date().toISOString().split('T')[0]"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
 
 
-Error: src/app/journal/journal.component.html:11:63 - error TS2339: Property 'message' does not exist on type 'JournalComponent'.
+Error: src/app/dream/dream.component.html:44:26 - error TS2339: Property 'new' does not exist on type 'DreamComponent'.
 
-11 <div *ngIf="message" style="color: green; margin: 10px 0;">{{ message }}</div>
-                                                                 ~~~~~~~
+44                   [max]="new Date().toISOString().split('T')[0]"
+                            ~~~
 
-  src/app/journal/journal.component 2.ts:6:16
-    6   templateUrl: './journal.component.html'
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Error occurs in the template of component JournalComponent.
-
-
-Error: src/app/journal/journal.component.html:12:59 - error TS2339: Property 'error' does not exist on type 'JournalComponent'.
-
-12 <div *ngIf="error" style="color: red; margin: 10px 0;">{{ error }}</div>
-                                                             ~~~~~
-
-  src/app/journal/journal.component 2.ts:6:16
-    6   templateUrl: './journal.component.html'
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Error occurs in the template of component JournalComponent.
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
 
 
-Error: src/app/journal/journal.component.html:16:36 - error NG8004: No pipe found with name 'date'.
+Error: src/app/dream/dream.component.html:53:32 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
 
-16     <strong>{{ journal.createdAt | date:'short' }}</strong> - {{ journal.content }}
-                                      ~~~~
+53                   [(ngModel)]="dreamForm.dreamType"
+                                  ~~~~~~~~~~~~~~~~~~~
 
-  src/app/journal/journal.component 2.ts:6:16
-    6   templateUrl: './journal.component.html'
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Error occurs in the template of component JournalComponent.
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:53:32 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+53                   [(ngModel)]="dreamForm.dreamType"
+                                  ~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:56:27 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+56                   <option *ngFor="let type of dreamTypes" [value]="type">
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:56:68 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+56                   <option *ngFor="let type of dreamTypes" [value]="type">
+                                                                      ~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:57:21 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+57                     {{ getDreamTypeDisplayName(type) }}
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+58                   </option>
+   ~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:70:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+70                 [(ngModel)]="dreamForm.title"
+                                ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:70:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+70                 [(ngModel)]="dreamForm.title"
+                                ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:75:38 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+75               <div class="form-text">{{ dreamForm.title.length }}/200 characters</div>
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:85:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+85                 [(ngModel)]="dreamForm.description"
+                                ~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:85:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+85                 [(ngModel)]="dreamForm.description"
+                                ~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:90:38 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+90               <div class="form-text">{{ dreamForm.description.length }}/5000 characters</div>
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:97:29 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+97                 [disabled]="loading || !dreamFormRef.form.valid"
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:99:23 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+99                 <span *ngIf="loading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                         ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:100:20 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+100                 <i *ngIf="!loading" class="bi bi-save me-2"></i>
+                       ~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:101:17 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+101                 {{ isEditMode ? 'Update Dream' : 'Save Dream' }}
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+102               </button>
+    ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:105:17 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+105                 *ngIf="isEditMode"
+                    ~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:108:26 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+108                 (click)="resetForm()"
+                             ~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:129:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+129                 [(ngModel)]="filters.dreamType"
+                                 ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:129:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+129                 [(ngModel)]="filters.dreamType"
+                                 ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:130:27 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+130                 (change)="applyFilters()"
+                              ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:133:25 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+133                 <option *ngFor="let type of dreamTypes" [value]="type">
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:133:66 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+133                 <option *ngFor="let type of dreamTypes" [value]="type">
+                                                                     ~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:134:19 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+134                   {{ getDreamTypeDisplayName(type) }}
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+135                 </option>
+    ~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:144:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+144                 [(ngModel)]="filters.startDate"
+                                 ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:144:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+144                 [(ngModel)]="filters.startDate"
+                                 ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:145:27 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+145                 (change)="applyFilters()"
+                              ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:154:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+154                 [(ngModel)]="filters.endDate"
+                                 ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:154:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+154                 [(ngModel)]="filters.endDate"
+                                 ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:155:27 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+155                 (change)="applyFilters()"
+                              ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:164:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+164                 [(ngModel)]="filters.search"
+                                 ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:164:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+164                 [(ngModel)]="filters.search"
+                                 ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:166:26 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+166                 (input)="applyFilters()"
+                             ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:172:87 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+172               <button type="button" class="btn btn-outline-secondary btn-sm" (click)="clearFilters()">
+                                                                                          ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:189:16 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+189           <div *ngIf="loading && dreams.length === 0" class="text-center py-4">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:197:16 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+197           <div *ngIf="!loading && dreams.length === 0" class="text-center py-5">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:204:16 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+204           <div *ngIf="dreams.length > 0" class="row">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:205:18 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+205             <div *ngFor="let dream of dreams" class="col-lg-6 col-xl-4 mb-4">
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:209:49 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+209                     <h6 class="card-title mb-1">{{ dream.title }}</h6>
+                                                    ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:211:59 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+211                       <i class="bi bi-calendar3 me-1"></i>{{ formatDate(dream.dreamDate) }}
+                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+212                     </small>
+    ~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:214:48 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+214                   <span class="badge" [class]="'bg-' + getDreamTypeBadgeColor(dream.dreamType)">
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:214:56 - error TS2339: Property 'getDreamTypeBadgeColor' does not exist on type 'DreamComponent'.
+
+214                   <span class="badge" [class]="'bg-' + getDreamTypeBadgeColor(dream.dreamType)">
+                                                           ~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:215:21 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+215                     {{ getDreamTypeDisplayName(dream.dreamType) }}
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+216                   </span>
+    ~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:219:40 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+219                   <p class="card-text">{{ dream.description }}</p>
+                                           ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:224:55 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+224                       <i class="bi bi-clock me-1"></i>{{ formatDateTime(dream.createdAt!) }}
+                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+225                     </small>
+    ~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:230:34 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+230                         (click)="editDream(dream)"
+                                     ~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:238:34 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+238                         (click)="deleteDream(dream)"
+                                     ~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
 
 
 
@@ -117,110 +700,541 @@ Error: src/app/journal/journal.component.html:16:36 - error NG8004: No pipe foun
 ✖ Failed to compile.
 ✔ Browser application bundle generation complete.
 
-Initial Chunk Files | Names   | Raw Size
-runtime.js          | runtime |  6.49 kB |
-
-4 unchanged chunks
-
-Build at: 2025-07-17T21:34:56.235Z - Hash: 8c52d1d31a70deb4 - Time: 351ms
-
-✔ Compiled successfully.
-✔ Browser application bundle generation complete.
-
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 47.71 kB |
-runtime.js          | runtime |  6.49 kB |
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 120.80 kB |
+runtime.js          | runtime |   6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T21:35:02.054Z - Hash: b9e2959d0eec1ae0 - Time: 407ms
+Build at: 2025-07-18T22:09:36.908Z - Hash: 83f553bdbd96f25a - Time: 384ms
 
-✔ Compiled successfully.
-✔ Browser application bundle generation complete.
+Error: src/app/dream/dream.component.html:44:26 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
 
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 47.96 kB |
-runtime.js          | runtime |  6.49 kB |
+44                   [max]="new Date().toISOString().split('T')[0]"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-3 unchanged chunks
-
-Build at: 2025-07-17T21:42:28.358Z - Hash: b435cda18fe19e76 - Time: 1049ms
-
-✔ Compiled successfully.
-✔ Browser application bundle generation complete.
-
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 50.06 kB |
-runtime.js          | runtime |  6.49 kB |
-
-3 unchanged chunks
-
-Build at: 2025-07-17T22:14:00.030Z - Hash: 4b2bb19c925ce68a - Time: 568ms
-
-✔ Compiled successfully.
-✔ Browser application bundle generation complete.
-
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 50.80 kB |
-runtime.js          | runtime |  6.49 kB |
-
-3 unchanged chunks
-
-Build at: 2025-07-17T22:14:19.165Z - Hash: 65255bced18f7b3e - Time: 439ms
-
-✔ Compiled successfully.
-✔ Browser application bundle generation complete.
-
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 52.77 kB |
-runtime.js          | runtime |  6.49 kB |
-
-3 unchanged chunks
-
-Build at: 2025-07-17T22:14:39.420Z - Hash: 56a5e098ff300d9e - Time: 245ms
-
-✔ Compiled successfully.
-✔ Browser application bundle generation complete.
-
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 53.53 kB |
-runtime.js          | runtime |  6.49 kB |
-
-3 unchanged chunks
-
-Build at: 2025-07-17T22:14:48.146Z - Hash: e2f1549c15aad91e - Time: 304ms
-
-✔ Compiled successfully.
-✔ Browser application bundle generation complete.
-
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 55.55 kB |
-runtime.js          | runtime |  6.49 kB |
-
-3 unchanged chunks
-
-Build at: 2025-07-17T22:41:12.956Z - Hash: 0bf8cf2c2676416c - Time: 1015ms
-
-Error: src/app/app.component.html:9:36 - error TS2339: Property 'showNavigation' does not exist on type 'AppComponent'.
-
-9       <nav class="main-nav" *ngIf="showNavigation()">
-                                     ~~~~~~~~~~~~~~
-
-  src/app/app.component.ts:5:16
-    5   templateUrl: './app.component.html',
-                     ~~~~~~~~~~~~~~~~~~~~~~
-    Error occurs in the template of component AppComponent.
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
 
 
-Error: src/app/app.component.html:22:37 - error TS2339: Property 'showNavigation' does not exist on type 'AppComponent'.
+Error: src/app/dream/dream.component.html:44:26 - error TS2339: Property 'new' does not exist on type 'DreamComponent'.
 
-22   <footer class="app-footer" *ngIf="showNavigation()">
-                                       ~~~~~~~~~~~~~~
+44                   [max]="new Date().toISOString().split('T')[0]"
+                            ~~~
 
-  src/app/app.component.ts:5:16
-    5   templateUrl: './app.component.html',
-                     ~~~~~~~~~~~~~~~~~~~~~~
-    Error occurs in the template of component AppComponent.
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:53:32 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+53                   [(ngModel)]="dreamForm.dreamType"
+                                  ~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:53:32 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+53                   [(ngModel)]="dreamForm.dreamType"
+                                  ~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:56:27 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+56                   <option *ngFor="let type of dreamTypes" [value]="type">
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:56:68 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+56                   <option *ngFor="let type of dreamTypes" [value]="type">
+                                                                      ~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:57:21 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+57                     {{ getDreamTypeDisplayName(type) }}
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+58                   </option>
+   ~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:70:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+70                 [(ngModel)]="dreamForm.title"
+                                ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:70:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+70                 [(ngModel)]="dreamForm.title"
+                                ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:75:38 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+75               <div class="form-text">{{ dreamForm.title.length }}/200 characters</div>
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:85:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+85                 [(ngModel)]="dreamForm.description"
+                                ~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:85:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+85                 [(ngModel)]="dreamForm.description"
+                                ~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:90:38 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+90               <div class="form-text">{{ dreamForm.description.length }}/5000 characters</div>
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:97:29 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+97                 [disabled]="loading || !dreamFormRef.form.valid"
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:99:23 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+99                 <span *ngIf="loading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                         ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:100:20 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+100                 <i *ngIf="!loading" class="bi bi-save me-2"></i>
+                       ~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:101:17 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+101                 {{ isEditMode ? 'Update Dream' : 'Save Dream' }}
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+102               </button>
+    ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:105:17 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+105                 *ngIf="isEditMode"
+                    ~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:108:26 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+108                 (click)="resetForm()"
+                             ~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:129:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+129                 [(ngModel)]="filters.dreamType"
+                                 ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:129:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+129                 [(ngModel)]="filters.dreamType"
+                                 ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:130:27 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+130                 (change)="applyFilters()"
+                              ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:133:25 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+133                 <option *ngFor="let type of dreamTypes" [value]="type">
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:133:66 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+133                 <option *ngFor="let type of dreamTypes" [value]="type">
+                                                                     ~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:134:19 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+134                   {{ getDreamTypeDisplayName(type) }}
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+135                 </option>
+    ~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:144:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+144                 [(ngModel)]="filters.startDate"
+                                 ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:144:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+144                 [(ngModel)]="filters.startDate"
+                                 ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:145:27 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+145                 (change)="applyFilters()"
+                              ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:154:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+154                 [(ngModel)]="filters.endDate"
+                                 ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:154:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+154                 [(ngModel)]="filters.endDate"
+                                 ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:155:27 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+155                 (change)="applyFilters()"
+                              ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:164:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+164                 [(ngModel)]="filters.search"
+                                 ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:164:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+164                 [(ngModel)]="filters.search"
+                                 ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:166:26 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+166                 (input)="applyFilters()"
+                             ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:172:87 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+172               <button type="button" class="btn btn-outline-secondary btn-sm" (click)="clearFilters()">
+                                                                                          ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:189:16 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+189           <div *ngIf="loading && dreams.length === 0" class="text-center py-4">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:197:16 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+197           <div *ngIf="!loading && dreams.length === 0" class="text-center py-5">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:204:16 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+204           <div *ngIf="dreams.length > 0" class="row">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:205:18 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+205             <div *ngFor="let dream of dreams" class="col-lg-6 col-xl-4 mb-4">
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:209:49 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+209                     <h6 class="card-title mb-1">{{ dream.title }}</h6>
+                                                    ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:211:59 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+211                       <i class="bi bi-calendar3 me-1"></i>{{ formatDate(dream.dreamDate) }}
+                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+212                     </small>
+    ~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:214:48 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+214                   <span class="badge" [class]="'bg-' + getDreamTypeBadgeColor(dream.dreamType)">
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:215:21 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+215                     {{ getDreamTypeDisplayName(dream.dreamType) }}
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+216                   </span>
+    ~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:219:40 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+219                   <p class="card-text">{{ dream.description }}</p>
+                                           ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:224:55 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+224                       <i class="bi bi-clock me-1"></i>{{ formatDateTime(dream.createdAt!) }}
+                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+225                     </small>
+    ~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:230:34 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+230                         (click)="editDream(dream)"
+                                     ~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:238:34 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+238                         (click)="deleteDream(dream)"
+                                     ~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
 
 
 
@@ -228,30 +1242,541 @@ Error: src/app/app.component.html:22:37 - error TS2339: Property 'showNavigation
 ✖ Failed to compile.
 ✔ Browser application bundle generation complete.
 
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 56.27 kB |
-runtime.js          | runtime |  6.49 kB |
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 120.88 kB |
+runtime.js          | runtime |   6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T22:41:20.072Z - Hash: 565dcc267b0fa82b - Time: 415ms
+Build at: 2025-07-18T22:09:47.578Z - Hash: ee652cddd362c076 - Time: 323ms
 
-Error: src/app/app.component.ts:17:18 - error TS2769: No overload matches this call.
-  Overload 1 of 3, '(observer?: Partial<Observer<Event_2>> | undefined): Subscription', gave the following error.
-    Type '(event: NavigationEnd) => void' has no properties in common with type 'Partial<Observer<Event_2>>'.
-  Overload 2 of 3, '(next: (value: Event_2) => void): Subscription', gave the following error.
-    Argument of type '(event: NavigationEnd) => void' is not assignable to parameter of type '(value: Event_2) => void'.
-      Types of parameters 'event' and 'value' are incompatible.
-        Type 'Event_2' is not assignable to type 'NavigationEnd'.
-          Type 'RouterEvent' is missing the following properties from type 'NavigationEnd': urlAfterRedirects, type
-  Overload 3 of 3, '(next?: ((value: Event_2) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription', gave the following error.
-    Argument of type '(event: NavigationEnd) => void' is not assignable to parameter of type '(value: Event_2) => void'.
-      Types of parameters 'event' and 'value' are incompatible.
-        Type 'Event_2' is not assignable to type 'NavigationEnd'.
+Error: src/app/dream/dream.component.html:44:26 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
 
-17       .subscribe((event: NavigationEnd) => {
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+44                   [max]="new Date().toISOString().split('T')[0]"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:44:26 - error TS2339: Property 'new' does not exist on type 'DreamComponent'.
+
+44                   [max]="new Date().toISOString().split('T')[0]"
+                            ~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:53:32 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+53                   [(ngModel)]="dreamForm.dreamType"
+                                  ~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:53:32 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+53                   [(ngModel)]="dreamForm.dreamType"
+                                  ~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:56:27 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+56                   <option *ngFor="let type of dreamTypes" [value]="type">
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:56:68 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+56                   <option *ngFor="let type of dreamTypes" [value]="type">
+                                                                      ~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:57:21 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+57                     {{ getDreamTypeDisplayName(type) }}
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+58                   </option>
+   ~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:70:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+70                 [(ngModel)]="dreamForm.title"
+                                ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:70:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+70                 [(ngModel)]="dreamForm.title"
+                                ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:75:38 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+75               <div class="form-text">{{ dreamForm.title.length }}/200 characters</div>
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:85:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+85                 [(ngModel)]="dreamForm.description"
+                                ~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:85:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+85                 [(ngModel)]="dreamForm.description"
+                                ~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:90:38 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+90               <div class="form-text">{{ dreamForm.description.length }}/5000 characters</div>
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:97:29 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+97                 [disabled]="loading || !dreamFormRef.form.valid"
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:99:23 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+99                 <span *ngIf="loading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                         ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:100:20 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+100                 <i *ngIf="!loading" class="bi bi-save me-2"></i>
+                       ~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:101:17 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+101                 {{ isEditMode ? 'Update Dream' : 'Save Dream' }}
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+102               </button>
+    ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:105:17 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+105                 *ngIf="isEditMode"
+                    ~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:108:26 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+108                 (click)="resetForm()"
+                             ~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:129:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+129                 [(ngModel)]="filters.dreamType"
+                                 ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:129:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+129                 [(ngModel)]="filters.dreamType"
+                                 ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:130:27 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+130                 (change)="applyFilters()"
+                              ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:133:25 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+133                 <option *ngFor="let type of dreamTypes" [value]="type">
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:133:66 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+133                 <option *ngFor="let type of dreamTypes" [value]="type">
+                                                                     ~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:134:19 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+134                   {{ getDreamTypeDisplayName(type) }}
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+135                 </option>
+    ~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:144:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+144                 [(ngModel)]="filters.startDate"
+                                 ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:144:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+144                 [(ngModel)]="filters.startDate"
+                                 ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:145:27 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+145                 (change)="applyFilters()"
+                              ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:154:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+154                 [(ngModel)]="filters.endDate"
+                                 ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:154:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+154                 [(ngModel)]="filters.endDate"
+                                 ~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:155:27 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+155                 (change)="applyFilters()"
+                              ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:164:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+164                 [(ngModel)]="filters.search"
+                                 ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:164:30 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+164                 [(ngModel)]="filters.search"
+                                 ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:166:26 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+166                 (input)="applyFilters()"
+                             ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:172:87 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+172               <button type="button" class="btn btn-outline-secondary btn-sm" (click)="clearFilters()">
+                                                                                          ~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:189:16 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+189           <div *ngIf="loading && dreams.length === 0" class="text-center py-4">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:197:16 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+197           <div *ngIf="!loading && dreams.length === 0" class="text-center py-5">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:204:16 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+204           <div *ngIf="dreams.length > 0" class="row">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:205:18 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+205             <div *ngFor="let dream of dreams" class="col-lg-6 col-xl-4 mb-4">
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:209:49 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+209                     <h6 class="card-title mb-1">{{ dream.title }}</h6>
+                                                    ~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:211:59 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+211                       <i class="bi bi-calendar3 me-1"></i>{{ formatDate(dream.dreamDate) }}
+                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+212                     </small>
+    ~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:214:48 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+214                   <span class="badge" [class]="'bg-' + getDreamTypeBadgeColor(dream.dreamType)">
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:215:21 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+215                     {{ getDreamTypeDisplayName(dream.dreamType) }}
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+216                   </span>
+    ~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:219:40 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+219                   <p class="card-text">{{ dream.description }}</p>
+                                           ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:224:55 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+224                       <i class="bi bi-clock me-1"></i>{{ formatDateTime(dream.createdAt!) }}
+                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+225                     </small>
+    ~~~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:230:34 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+230                         (click)="editDream(dream)"
+                                     ~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
+
+
+Error: src/app/dream/dream.component.html:238:34 - error NG5002: Parser Error: Unexpected token 'Date' at column 5 in [new Date().toISOString().split('T')[0]] in /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/app/dream/dream.component.html@43:25
+
+238                         (click)="deleteDream(dream)"
+                                     ~~~~~~~~~~~~~~~~~~
+
+  src/app/dream/dream.component.ts:8:16
+    8   templateUrl: './dream.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component DreamComponent.
 
 
 
@@ -259,152 +1784,34 @@ Error: src/app/app.component.ts:17:18 - error TS2769: No overload matches this c
 ✖ Failed to compile.
 ✔ Browser application bundle generation complete.
 
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 63.89 kB |
-runtime.js          | runtime |  6.49 kB |
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 152.30 kB |
+runtime.js          | runtime |   6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T22:42:00.470Z - Hash: b15a466226d34408 - Time: 1115ms
-
-Error: src/app/app.component.ts:17:18 - error TS2769: No overload matches this call.
-  Overload 1 of 3, '(observer?: Partial<Observer<Event_2>> | undefined): Subscription', gave the following error.
-    Type '(event: NavigationEnd) => void' has no properties in common with type 'Partial<Observer<Event_2>>'.
-  Overload 2 of 3, '(next: (value: Event_2) => void): Subscription', gave the following error.
-    Argument of type '(event: NavigationEnd) => void' is not assignable to parameter of type '(value: Event_2) => void'.
-      Types of parameters 'event' and 'value' are incompatible.
-        Type 'Event_2' is not assignable to type 'NavigationEnd'.
-          Type 'RouterEvent' is missing the following properties from type 'NavigationEnd': urlAfterRedirects, type
-  Overload 3 of 3, '(next?: ((value: Event_2) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription', gave the following error.
-    Argument of type '(event: NavigationEnd) => void' is not assignable to parameter of type '(value: Event_2) => void'.
-      Types of parameters 'event' and 'value' are incompatible.
-        Type 'Event_2' is not assignable to type 'NavigationEnd'.
-
-17       .subscribe((event: NavigationEnd) => {
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-
-✖ Failed to compile.
-✔ Browser application bundle generation complete.
-
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 63.93 kB |
-runtime.js          | runtime |  6.49 kB |
-
-3 unchanged chunks
-
-Build at: 2025-07-17T22:42:09.726Z - Hash: 96180f19aa8dde7f - Time: 304ms
-
-Error: src/app/app.component.ts:15:5 - error TS2769: No overload matches this call.
-  Overload 1 of 3, '(observer?: Partial<Observer<Event_2>> | undefined): Subscription', gave the following error.
-    Type '(event: NavigationEnd) => void' is not assignable to type '(value: Event_2) => void'.
-      Types of parameters 'event' and 'value' are incompatible.
-        Type 'Event_2' is not assignable to type 'NavigationEnd'.
-          Type 'RouterEvent' is missing the following properties from type 'NavigationEnd': urlAfterRedirects, type
-  Overload 2 of 3, '(next: (value: Event_2) => void): Subscription', gave the following error.
-    Argument of type '{ next: (event: NavigationEnd) => void; }' is not assignable to parameter of type '(value: Event_2) => void'.
-      Object literal may only specify known properties, and 'next' does not exist in type '(value: Event_2) => void'.
-  Overload 3 of 3, '(next?: ((value: Event_2) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription', gave the following error.
-    Argument of type '{ next: (event: NavigationEnd) => void; }' is not assignable to parameter of type '(value: Event_2) => void'.
-      Object literal may only specify known properties, and 'next' does not exist in type '(value: Event_2) => void'.
-
- 15     this.router.events
-        ~~~~~~~~~~~~~~~~~~
- 16       .pipe(filter(event => event instanceof NavigationEnd))
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-... 
- 20         }
-    ~~~~~~~~~
- 21       });
-    ~~~~~~~~
-
-
-
-
-
-✖ Failed to compile.
-✔ Browser application bundle generation complete.
-
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 62.12 kB |
-runtime.js          | runtime |  6.49 kB |
-
-3 unchanged chunks
-
-Build at: 2025-07-17T22:42:28.537Z - Hash: 5be838ae843667a6 - Time: 284ms
-
-Error: src/app/app.component.ts:15:5 - error TS2769: No overload matches this call.
-  Overload 1 of 3, '(observer?: Partial<Observer<Event_2>> | undefined): Subscription', gave the following error.
-    Type '(event: NavigationEnd) => void' is not assignable to type '(value: Event_2) => void'.
-      Types of parameters 'event' and 'value' are incompatible.
-        Type 'Event_2' is not assignable to type 'NavigationEnd'.
-          Type 'RouterEvent' is missing the following properties from type 'NavigationEnd': urlAfterRedirects, type
-  Overload 2 of 3, '(next: (value: Event_2) => void): Subscription', gave the following error.
-    Argument of type '{ next: (event: NavigationEnd) => void; }' is not assignable to parameter of type '(value: Event_2) => void'.
-      Object literal may only specify known properties, and 'next' does not exist in type '(value: Event_2) => void'.
-  Overload 3 of 3, '(next?: ((value: Event_2) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription', gave the following error.
-    Argument of type '{ next: (event: NavigationEnd) => void; }' is not assignable to parameter of type '(value: Event_2) => void'.
-      Object literal may only specify known properties, and 'next' does not exist in type '(value: Event_2) => void'.
-
- 15     this.router.events
-        ~~~~~~~~~~~~~~~~~~
- 16       .pipe(filter(event => event instanceof NavigationEnd))
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-... 
- 20         }
-    ~~~~~~~~~
- 21       });
-    ~~~~~~~~
-
-
-
-
-
-✖ Failed to compile.
-✔ Browser application bundle generation complete.
-
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 61.38 kB |
-runtime.js          | runtime |  6.49 kB |
-
-3 unchanged chunks
-
-Build at: 2025-07-17T22:42:36.319Z - Hash: ae6412dcd5f912db - Time: 275ms
+Build at: 2025-07-18T22:09:53.375Z - Hash: 9c63d0791347ebf1 - Time: 418ms
 
 ✔ Compiled successfully.
 ✔ Browser application bundle generation complete.
 
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 63.69 kB |
-runtime.js          | runtime |  6.49 kB |
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 152.53 kB |
+runtime.js          | runtime |   6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T22:42:57.982Z - Hash: 13882701d4d08f76 - Time: 227ms
+Build at: 2025-07-18T22:10:14.790Z - Hash: 429e5fd162f9c150 - Time: 531ms
 
 ✔ Compiled successfully.
 ✔ Browser application bundle generation complete.
 
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 68.43 kB |
-runtime.js          | runtime |  6.49 kB |
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 153.88 kB |
+runtime.js          | runtime |   6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T23:01:33.621Z - Hash: a0e699f9808d2846 - Time: 694ms
-
-✔ Compiled successfully.
-✔ Browser application bundle generation complete.
-
-Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 74.88 kB |
-runtime.js          | runtime |  6.49 kB |
-
-3 unchanged chunks
-
-Build at: 2025-07-17T23:02:49.355Z - Hash: 0853835c5ae38f48 - Time: 361ms
+Build at: 2025-07-18T22:10:28.148Z - Hash: 1060d7f64f8db5ca - Time: 229ms
 
 ✔ Compiled successfully.
