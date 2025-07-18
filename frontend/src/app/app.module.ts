@@ -14,6 +14,9 @@ import { JwtInterceptor } from './auth/jwt-interceptor';
 import { EmailVerificationComponent } from './auth/email-verification/email-verification.component';
 import { JournalArchiveComponent } from './journal/journal-archive/journal-archive.component';
 import { DreamComponent } from './dream/dream.component';
+import { ChangePasswordComponent } from './auth/change-password/change-password.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,10 @@ import { DreamComponent } from './dream/dream.component';
     JournalComponent,
     EmailVerificationComponent,
     JournalArchiveComponent,
-    DreamComponent
+    DreamComponent,
+    ChangePasswordComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

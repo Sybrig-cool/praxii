@@ -110,4 +110,71 @@ public class UserService {
         // Send verification email
         emailService.sendVerificationEmail(email, verificationToken);
     }
+
+    public void updatePassword(String userId, String newPassword) {
+        Optional<User> userOptional = userRepository.findById(userId);
+        
+        if (userOptional.isEmpty()) {
+            throw new RuntimeException("User not found");
+        }
+        
+        User user = userOptional.get();
+        String hashedPassword = passwordEncoder.encode(newPassword);
+        
+        user.setPassword(hashedPassword);
+        user.setUpdatedAt(Instant.now());
+        
+        userRepository.save(user);
+    }
+
+    public void initiatePasswordReset(String email) {
+        Optional<User> userOptional = userRepository.findByEmail(email);
+        
+        if (userOptional.isEmpty()) {
+            // Don't reveal if email doesn't exist - just return silently
+            return;
+        }
+        
+        User user = userOptional.get();
+        
+        // Generate password reset token
+        String resetToken = UUID.randomUUID().toString();
+        Instant tokenExpiration = Instant.now().plus(1, ChronoUnit.HOURS); // 1 hour expiration
+        
+        user.setPasswordResetToken(resetToken);
+        user.setPasswordResetExpiresAt(tokenExpiration);
+        user.setUpdatedAt(Instant.now());
+        
+        userRepository.save(user);
+        
+        // Send password reset email
+        emailService.sendPasswordResetEmail(email, resetToken);
+    }
+
+    public boolean resetPassword(String token, String newPassword) {
+        Optional<User> userOptional = userRepository.findByPasswordResetToken(token);
+        
+        if (userOptional.isEmpty()) {
+            return false;
+        }
+        
+        User user = userOptional.get();
+        
+        // Check if token is expired
+        if (user.getPasswordResetExpiresAt().isBefore(Instant.now())) {
+            return false;
+        }
+        
+        // Update password
+        String hashedPassword = passwordEncoder.encode(newPassword);
+        user.setPassword(hashedPassword);
+        
+        // Clear reset token
+        user.setPasswordResetToken(null);
+        user.setPasswordResetExpiresAt(null);
+        user.setUpdatedAt(Instant.now());
+        
+        userRepository.save(user);
+        return true;
+    }
 }

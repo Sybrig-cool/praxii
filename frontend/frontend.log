@@ -1815,3 +1815,576 @@ runtime.js          | runtime |   6.49 kB |
 Build at: 2025-07-18T22:10:28.148Z - Hash: 1060d7f64f8db5ca - Time: 229ms
 
 ✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 153.88 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:20:33.238Z - Hash: 0ac61f2983b8d7ea - Time: 1128ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 155.57 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:20:43.751Z - Hash: 252352448224ac2b - Time: 441ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 157.43 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:20:59.963Z - Hash: 275559a3b30ad706 - Time: 426ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 163.22 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:21:21.815Z - Hash: 35afb8d7d7af7e61 - Time: 271ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 185.23 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:21:52.592Z - Hash: 94d063f3de35213c - Time: 343ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 190.77 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:22:06.176Z - Hash: 1212c41b149fb944 - Time: 371ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 191.09 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:22:23.907Z - Hash: 5eb57c0bc816536a - Time: 501ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 192.48 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:22:41.276Z - Hash: 57a3c7a1c5ae376e - Time: 211ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 194.34 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:43:23.657Z - Hash: d7588485b7bfa5bd - Time: 677ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 196.53 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:43:34.312Z - Hash: 6e28bf991955a8a6 - Time: 207ms
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:46:22 - error TS2339: Property 'forgotPassword' does not exist on type 'AuthService'.
+
+46     this.authService.forgotPassword(this.email).subscribe({
+                        ~~~~~~~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:47:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+47       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:52:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+52       error: (error) => {
+                 ~~~~~
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 209.18 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:43:53.687Z - Hash: b028f9f9fba59e3e - Time: 283ms
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:46:22 - error TS2339: Property 'forgotPassword' does not exist on type 'AuthService'.
+
+46     this.authService.forgotPassword(this.email).subscribe({
+                        ~~~~~~~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:47:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+47       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:52:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+52       error: (error) => {
+                 ~~~~~
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 211.01 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:44:01.037Z - Hash: d20b632ef65ca6d9 - Time: 320ms
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:46:22 - error TS2339: Property 'forgotPassword' does not exist on type 'AuthService'.
+
+46     this.authService.forgotPassword(this.email).subscribe({
+                        ~~~~~~~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:47:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+47       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:52:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+52       error: (error) => {
+                 ~~~~~
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+5 unchanged chunks
+
+Build at: 2025-07-18T22:44:01.208Z - Hash: d20b632ef65ca6d9 - Time: 131ms
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:46:22 - error TS2339: Property 'forgotPassword' does not exist on type 'AuthService'.
+
+46     this.authService.forgotPassword(this.email).subscribe({
+                        ~~~~~~~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:47:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+47       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:52:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+52       error: (error) => {
+                 ~~~~~
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 216.00 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:44:20.220Z - Hash: cee9da7e7267a2b2 - Time: 223ms
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:46:22 - error TS2339: Property 'forgotPassword' does not exist on type 'AuthService'.
+
+46     this.authService.forgotPassword(this.email).subscribe({
+                        ~~~~~~~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:47:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+47       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:52:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+52       error: (error) => {
+                 ~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:97:22 - error TS2339: Property 'resetPassword' does not exist on type 'AuthService'.
+
+97     this.authService.resetPassword(resetData).subscribe({
+                        ~~~~~~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:98:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+98       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:107:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+107       error: (error) => {
+                  ~~~~~
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 241.60 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:44:52.879Z - Hash: ceeae9bb01bb2245 - Time: 446ms
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:46:22 - error TS2339: Property 'forgotPassword' does not exist on type 'AuthService'.
+
+46     this.authService.forgotPassword(this.email).subscribe({
+                        ~~~~~~~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:47:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+47       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:52:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+52       error: (error) => {
+                 ~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:97:22 - error TS2339: Property 'resetPassword' does not exist on type 'AuthService'.
+
+97     this.authService.resetPassword(resetData).subscribe({
+                        ~~~~~~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:98:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+98       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:107:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+107       error: (error) => {
+                  ~~~~~
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 247.15 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:45:46.900Z - Hash: 6700215c9408797a - Time: 438ms
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:46:22 - error TS2339: Property 'forgotPassword' does not exist on type 'AuthService'.
+
+46     this.authService.forgotPassword(this.email).subscribe({
+                        ~~~~~~~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:47:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+47       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:52:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+52       error: (error) => {
+                 ~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:97:22 - error TS2339: Property 'resetPassword' does not exist on type 'AuthService'.
+
+97     this.authService.resetPassword(resetData).subscribe({
+                        ~~~~~~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:98:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+98       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:107:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+107       error: (error) => {
+                  ~~~~~
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 247.15 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:45:58.538Z - Hash: df3eedd5ceaf8bb7 - Time: 530ms
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:46:22 - error TS2339: Property 'forgotPassword' does not exist on type 'AuthService'.
+
+46     this.authService.forgotPassword(this.email).subscribe({
+                        ~~~~~~~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:47:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+47       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:52:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+52       error: (error) => {
+                 ~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:97:22 - error TS2339: Property 'resetPassword' does not exist on type 'AuthService'.
+
+97     this.authService.resetPassword(resetData).subscribe({
+                        ~~~~~~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:98:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+98       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:107:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+107       error: (error) => {
+                  ~~~~~
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 247.80 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:46:04.713Z - Hash: 9e463954fb346dcd - Time: 177ms
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:46:22 - error TS2339: Property 'forgotPassword' does not exist on type 'AuthService'.
+
+46     this.authService.forgotPassword(this.email).subscribe({
+                        ~~~~~~~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:47:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+47       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:52:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+52       error: (error) => {
+                 ~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:97:22 - error TS2339: Property 'resetPassword' does not exist on type 'AuthService'.
+
+97     this.authService.resetPassword(resetData).subscribe({
+                        ~~~~~~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:98:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+98       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:107:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+107       error: (error) => {
+                  ~~~~~
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 248.15 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:46:15.331Z - Hash: deb69e5be2d9db95 - Time: 247ms
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:46:22 - error TS2339: Property 'forgotPassword' does not exist on type 'AuthService'.
+
+46     this.authService.forgotPassword(this.email).subscribe({
+                        ~~~~~~~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:47:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+47       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:52:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+52       error: (error) => {
+                 ~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:97:22 - error TS2339: Property 'resetPassword' does not exist on type 'AuthService'.
+
+97     this.authService.resetPassword(resetData).subscribe({
+                        ~~~~~~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:98:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+98       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:107:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+107       error: (error) => {
+                  ~~~~~
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 248.15 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:47:43.406Z - Hash: b81a7ba87c12181e - Time: 906ms
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:46:22 - error TS2339: Property 'forgotPassword' does not exist on type 'AuthService'.
+
+46     this.authService.forgotPassword(this.email).subscribe({
+                        ~~~~~~~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:47:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+47       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/forgot-password/forgot-password.component.ts:52:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+52       error: (error) => {
+                 ~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:97:22 - error TS2339: Property 'resetPassword' does not exist on type 'AuthService'.
+
+97     this.authService.resetPassword(resetData).subscribe({
+                        ~~~~~~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:98:14 - error TS7006: Parameter 'response' implicitly has an 'any' type.
+
+98       next: (response) => {
+                ~~~~~~~~
+
+
+Error: src/app/auth/reset-password/reset-password.component.ts:107:15 - error TS7006: Parameter 'error' implicitly has an 'any' type.
+
+107       error: (error) => {
+                  ~~~~~
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 248.42 kB |
+runtime.js          | runtime |   6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-18T22:47:50.532Z - Hash: 08be2d9bf4c9ac74 - Time: 519ms
+
+✔ Compiled successfully.

@@ -4,18 +4,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.praxii.backend.model.User;
 import com.praxii.backend.security.JwtUtil;
 import com.praxii.backend.service.UserService;
+import com.praxii.backend.dto.PasswordChangeRequest;
+import com.praxii.backend.dto.ForgotPasswordRequest;
+import com.praxii.backend.dto.ResetPasswordRequest;
+
+import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AuthController {
+    
+    private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
+    
     @Autowired
     private UserService userService;
     @Autowired
@@ -69,6 +83,91 @@ public class AuthController {
             return ResponseEntity.ok("Verification email sent successfully");
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @PutMapping("/change-password")
+    public ResponseEntity<?> changePassword(@Valid @RequestBody PasswordChangeRequest request, 
+                                           @RequestHeader("Authorization") String token) {
+        try {
+            logger.info("Password change request received");
+            
+            // Extract user ID from JWT token
+            String jwt = token.substring(7); // Remove "Bearer " prefix
+            String username = jwtUtil.extractUsername(jwt);
+            String userId = jwtUtil.extractUserId(jwt);
+            
+            // Validate that new password and confirmation match
+            if (!request.getNewPassword().equals(request.getConfirmPassword())) {
+                return ResponseEntity.badRequest().body("New password and confirmation do not match");
+            }
+            
+            // Get the user
+            User user = userService.findByUsername(username)
+                    .orElseThrow(() -> new RuntimeException("User not found"));
+            
+            // Verify current password
+            if (!userService.validatePassword(request.getCurrentPassword(), user.getPassword())) {
+                return ResponseEntity.badRequest().body("Current password is incorrect");
+            }
+            
+            // Check if new password is different from current password
+            if (userService.validatePassword(request.getNewPassword(), user.getPassword())) {
+                return ResponseEntity.badRequest().body("New password must be different from current password");
+            }
+            
+            // Update password
+            userService.updatePassword(userId, request.getNewPassword());
+            
+            logger.info("Password changed successfully for user: {}", username);
+            return ResponseEntity.ok("Password changed successfully");
+            
+        } catch (Exception e) {
+            logger.error("Error changing password: ", e);
+            return ResponseEntity.badRequest().body("Failed to change password: " + e.getMessage());
+        }
+    }
+
+    @PostMapping("/forgot-password")
+    public ResponseEntity<?> forgotPassword(@Valid @RequestBody ForgotPasswordRequest request) {
+        try {
+            logger.info("Forgot password request for email: {}", request.getEmail());
+            
+            userService.initiatePasswordReset(request.getEmail());
+            
+            // Always return success message for security (don't reveal if email exists)
+            return ResponseEntity.ok("If an account with this email exists, you will receive a password reset link shortly.");
+            
+        } catch (Exception e) {
+            logger.error("Error processing forgot password request: ", e);
+            // Return generic success message to avoid revealing if email exists
+            return ResponseEntity.ok("If an account with this email exists, you will receive a password reset link shortly.");
+        }
+    }
+
+    @PostMapping("/reset-password")
+    public ResponseEntity<?> resetPassword(@Valid @RequestBody ResetPasswordRequest request) {
+        try {
+            logger.info("Password reset request received");
+            
+            // Validate that new password and confirmation match
+            if (!request.getNewPassword().equals(request.getConfirmPassword())) {
+                return ResponseEntity.badRequest().body("New password and confirmation do not match");
+            }
+            
+            // Reset the password
+            boolean resetSuccessful = userService.resetPassword(request.getToken(), request.getNewPassword());
+            
+            if (resetSuccessful) {
+                logger.info("Password reset successfully");
+                return ResponseEntity.ok("Password reset successfully. You can now log in with your new password.");
+            } else {
+                return ResponseEntity.badRequest().body("Invalid or expired reset token. Please request a new password reset.");
+            }
+            
+        } catch (Exception e) {
+            logger.error("Error resetting password: ", e);
+            return ResponseEntity.badRequest().body("Failed to reset password: " + e.getMessage());
         }
     }
 

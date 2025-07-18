@@ -16,6 +16,8 @@ public class User {
     private boolean emailVerified = false;
     private String verificationToken;
     private Instant tokenExpiresAt;
+    private String passwordResetToken;
+    private Instant passwordResetExpiresAt;
     private Instant createdAt;
     private Instant updatedAt;
 
@@ -56,5 +58,11 @@ public class User {
 
     public Instant getTokenExpiresAt() { return tokenExpiresAt; }
     public void setTokenExpiresAt(Instant tokenExpiresAt) { this.tokenExpiresAt = tokenExpiresAt; }
+
+    public String getPasswordResetToken() { return passwordResetToken; }
+    public void setPasswordResetToken(String passwordResetToken) { this.passwordResetToken = passwordResetToken; }
+
+    public Instant getPasswordResetExpiresAt() { return passwordResetExpiresAt; }
+    public void setPasswordResetExpiresAt(Instant passwordResetExpiresAt) { this.passwordResetExpiresAt = passwordResetExpiresAt; }
 
 }

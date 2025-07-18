@@ -22,4 +22,24 @@ public class EmailService {
         // - JavaMailSender with SMTP
         // For now, we're just logging to console for development
     }
+
+    public void sendPasswordResetEmail(String email, String resetToken) {
+        String resetUrl = "http://localhost:4200/reset-password?token=" + resetToken;
+        
+        System.out.println("=== PASSWORD RESET EMAIL ===");
+        System.out.println("To: " + email);
+        System.out.println("Subject: Reset your Praxii password");
+        System.out.println("Body: You have requested to reset your password.");
+        System.out.println("Please click the following link to reset your password:");
+        System.out.println(resetUrl);
+        System.out.println("This link will expire in 1 hour.");
+        System.out.println("If you didn't request this, please ignore this email.");
+        System.out.println("============================");
+        
+        // In a real application, you would integrate with an email service like:
+        // - AWS SES
+        // - SendGrid
+        // - JavaMailSender with SMTP
+        // For now, we're just logging to console for development
+    }
 }
