@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { JournalService, Journal } from '../journal.service';
-import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-journal',
@@ -15,9 +13,7 @@ export class JournalComponent implements OnInit {
   message = '';
 
   constructor(
-    private journalService: JournalService,
-    private authService: AuthService,
-    private router: Router
+    private journalService: JournalService
   ) {}
 
   ngOnInit(): void {
@@ -56,11 +52,6 @@ export class JournalComponent implements OnInit {
         console.error('Journal creation error:', err);
       }
     });
-  }
-
-  logout(): void {
-    this.authService.logout();
-    this.router.navigate(['/login']);
   }
 
   getCurrentYear(): number {

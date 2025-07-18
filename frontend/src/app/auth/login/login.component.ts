@@ -23,6 +23,7 @@ export class LoginComponent {
     }).subscribe({
       next: (res) => {
         this.authService.saveToken(res.token);
+        this.authService.saveUserInfo(res.username, res.email);
         this.loading = false;
         // Navigate to the dashboard after a successful login
         this.router.navigate(['/dashboard']);

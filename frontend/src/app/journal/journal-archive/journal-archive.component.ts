@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { JournalService } from '../journal.service';
+import { JournalService, Journal } from '../../journal.service';
 
 @Component({
   selector: 'app-journal-archive',
@@ -9,7 +9,7 @@ import { JournalService } from '../journal.service';
 })
 export class JournalArchiveComponent implements OnInit {
   
-  journals: any[] = [];
+  journals: Journal[] = [];
   loading = false;
   error = '';
   currentMonth = '';
@@ -43,11 +43,11 @@ export class JournalArchiveComponent implements OnInit {
     this.error = '';
     
     this.journalService.getJournalsByDate(year, month).subscribe({
-      next: (response) => {
+      next: (response: Journal[]) => {
         this.journals = response;
         this.loading = false;
       },
-      error: (error) => {
+      error: (error: any) => {
         this.error = 'Failed to load journal entries';
         this.loading = false;
       }
