@@ -17,6 +17,24 @@ export class JournalComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    // Check if user is authenticated
+    const token = this.authService.getToken();
+    if (!token) {
+      this.error = 'No authentication token found. Please login first.';
+      console.error('No JWT token found in localStorage');
+      this.router.navigate(['/login']);
+      return;
+    }
+    
+    if (!this.authService.isTokenValid()) {
+      this.error = 'Authentication token has expired. Please login again.';
+      console.error('JWT token is expired or invalid');
+      this.authService.logout();
+      this.router.navigate(['/login']);
+      return;
+    }
+    
+    console.log('JWT token found and valid, loading journals...');
     this.loadJournals();
   }
 
@@ -26,30 +44,83 @@ export class JournalComponent implements OnInit {
       next: res => this.journals = res,
       error: (err) => {
         this.journals = [];
-        this.error = 'Failed to load journals: ' + (err.error || err.message || 'Unknown error');
         console.error('Journal loading error:', err);
+        
+        if (err.status === 0) {
+          this.error = 'Failed to load journals: Cannot connect to server. Please check if you are logged in.';
+        } else if (err.status === 401) {
+          this.error = 'Failed to load journals: Authentication failed. Please login again.';
+        } else if (err.status === 403) {
+          this.error = 'Failed to load journals: Access denied. Please login again.';
+        } else {
+          this.error = 'Failed to load journals: ' + (err.error || err.message || `Error ${err.status}`);
+        }
       }
     });
   }
 
   create(): void {
     if (!this.content.trim()) {
+      this.error = 'Please enter some content for your journal entry.';
       return;
     }
+    
+    // Check if user is still authenticated
+    const token = this.authService.getToken();
+    if (!token) {
+      this.error = 'No authentication token found. Please login first.';
+      console.error('No JWT token found when trying to create journal');
+      this.router.navigate(['/login']);
+      return;
+    }
+    
+    if (!this.authService.isTokenValid()) {
+      this.error = 'Authentication token has expired. Please login again.';
+      console.error('JWT token is expired or invalid when trying to create journal');
+      this.authService.logout();
+      this.router.navigate(['/login']);
+      return;
+    }
+    
+    console.log('Creating journal with content:', this.content);
+    console.log('Token present:', !!token);
     this.loading = true;
     this.error = '';
     this.message = '';
+    
     this.journalService.createJournal(this.content).subscribe({
-      next: () => {
+      next: (response) => {
+        console.log('Journal creation response:', response);
         this.content = '';
         this.loading = false;
         this.message = 'Journal entry created successfully!';
         this.loadJournals();
+        
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          this.message = '';
+        }, 5000);
       },
       error: (err) => {
         this.loading = false;
-        this.error = 'Failed to create journal: ' + (err.error || err.message || 'Unknown error');
         console.error('Journal creation error:', err);
+        console.error('Error status:', err.status);
+        console.error('Error body:', err.error);
+        
+        if (err.status === 0) {
+          this.error = 'Failed to create journal: Cannot connect to server. Please check your connection and try again.';
+        } else if (err.status === 401) {
+          this.error = 'Failed to create journal: Authentication failed. Please login again.';
+          this.authService.logout();
+          this.router.navigate(['/login']);
+        } else if (err.status === 403) {
+          this.error = 'Failed to create journal: Access denied. Please login again.';
+          this.authService.logout();
+          this.router.navigate(['/login']);
+        } else {
+          const errorMessage = err.error?.message || err.message || `HTTP Error ${err.status}`;
+          this.error = 'Failed to create journal: ' + errorMessage;
+        }
       }
     });
   }

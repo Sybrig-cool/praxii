@@ -1,1 +1,266 @@
+/* Signup Component Styles */
 
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl) var(--space-md);
+  position: relative;
+  background: var(--bg-primary);
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.card-header {
+  padding: var(--space-3xl) var(--space-xl) var(--space-xl);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.welcome-icon {
+  font-size: var(--text-5xl);
+  margin-bottom: var(--space-md);
+}
+
+.signup-title {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.02em;
+}
+
+.signup-subtitle {
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.card-body {
+  padding: var(--space-xl);
+}
+
+.signup-form {
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .label-icon {
+    font-size: 1.1rem;
+  }
+
+  .form-input {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid transparent;
+    transition: all var(--transition-fast);
+    
+    &:focus {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(240, 147, 251, 0.15);
+    }
+  }
+
+  .btn {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    
+    &:not(:disabled) {
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(240, 147, 251, 0.3);
+      }
+      
+      &:active {
+        transform: translateY(-1px);
+      }
+    }
+    
+    .btn-icon {
+      margin-right: 0.5rem;
+      display: inline-block;
+      animation: bounce 2s infinite;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-5px); }
+  60% { transform: translateY(-3px); }
+}
+
+.alert {
+  animation: slideIn 0.3s ease-out;
+  
+  .alert-icon {
+    font-size: 1.2rem;
+  }
+}
+
+.card-footer {
+  padding: 2rem;
+  background: rgba(247, 250, 252, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-prompt {
+  text-align: center;
+  
+  p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+.login-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-lg);
+  background: rgba(240, 147, 251, 0.1);
+  transition: all var(--transition-fast);
+  
+  &:hover {
+    background: rgba(240, 147, 251, 0.2);
+    transform: translateY(-2px);
+    
+    .link-arrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.link-arrow {
+  transition: transform var(--transition-fast);
+  font-weight: bold;
+}
+
+/* Background Decoration */
+.bg-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.decoration-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  animation: float-circles 25s linear infinite;
+}
+
+.circle-1 {
+  width: 250px;
+  height: 250px;
+  top: -125px;
+  right: -125px;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 180px;
+  height: 180px;
+  bottom: 20%;
+  left: -90px;
+  animation-delay: -8s;
+}
+
+.circle-3 {
+  width: 120px;
+  height: 120px;
+  top: 30%;
+  right: 10%;
+  animation-delay: -15s;
+}
+
+@keyframes float-circles {
+  0% { transform: translateX(0px) rotate(0deg); }
+  25% { transform: translateX(10px) rotate(90deg); }
+  50% { transform: translateX(0px) rotate(180deg); }
+  75% { transform: translateX(-10px) rotate(270deg); }
+  100% { transform: translateX(0px) rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .signup-card {
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card-header {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+  
+  .signup-title {
+    font-size: 1.75rem;
+  }
+  
+  .card-body,
+  .card-footer {
+    padding: 1.5rem;
+  }
+  
+  .welcome-icon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: 1.25rem;
+  }
+  
+  .signup-title {
+    font-size: 1.5rem;
+  }
+  
+  .signup-subtitle {
+    font-size: 0.9rem;
+  }
+}

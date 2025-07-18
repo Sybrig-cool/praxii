@@ -9,12 +9,12 @@ Initial Chunk Files   | Names         |  Raw Size
 vendor.js             | vendor        |   2.42 MB |
 polyfills.js          | polyfills     | 238.07 kB |
 styles.css, styles.js | styles        | 132.54 kB |
-main.js               | main          |  40.07 kB |
+main.js               | main          |  47.74 kB |
 runtime.js            | runtime       |   6.49 kB |
 
-| Initial Total |   2.82 MB
+| Initial Total |   2.83 MB
 
-Build at: 2025-07-17T19:27:47.728Z - Hash: fe5766dd3a3aa026 - Time: 6693ms
+Build at: 2025-07-17T20:49:27.098Z - Hash: 3d7d8823a4195d74 - Time: 4152ms
 
 Warning: /Users/emmanuelstephen/Documents/praxii/praxii/frontend/src/environments/environment.prod.ts is part of the TypeScript compilation but it's unused.
 Add only entry points to the 'files' or 'include' properties in your tsconfig.
@@ -28,110 +28,383 @@ Add only entry points to the 'files' or 'include' properties in your tsconfig.
 ✔ Browser application bundle generation complete.
 
 Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 40.07 kB |
+main.js             | main    | 47.84 kB |
 runtime.js          | runtime |  6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T19:47:18.584Z - Hash: cb7c06cc51b9977b - Time: 1627ms
+Build at: 2025-07-17T21:33:03.658Z - Hash: 3254c179560c56b1 - Time: 6024ms
+
+Error: src/app/journal/journal.component.html:3:20 - error TS2339: Property 'logout' does not exist on type 'JournalComponent'.
+
+3   <button (click)="logout()" style="background-color: #f44336; color: white; border: none; padding: 5px 10px; cursor: pointer;">Logout</button>
+                     ~~~~~~
+
+  src/app/journal/journal.component 2.ts:6:16
+    6   templateUrl: './journal.component.html'
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component JournalComponent.
+
+
+Error: src/app/journal/journal.component.html:5:43 - error NG8003: No directive found with exportAs 'ngForm'.
+
+5 <form (ngSubmit)="create()" #journalForm="ngForm">
+                                            ~~~~~~
+
+  src/app/journal/journal.component 2.ts:6:16
+    6   templateUrl: './journal.component.html'
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component JournalComponent.
+
+
+Error: src/app/journal/journal.component.html:6:28 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'textarea'.
+
+6   <textarea name="content" [(ngModel)]="content" required placeholder="Write your journal entry here..."></textarea>
+                             ~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/journal/journal.component 2.ts:6:16
+    6   templateUrl: './journal.component.html'
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component JournalComponent.
+
+
+Error: src/app/journal/journal.component.html:6:41 - error TS2322: Type 'Event' is not assignable to type 'string'.
+
+6   <textarea name="content" [(ngModel)]="content" required placeholder="Write your journal entry here..."></textarea>
+                                          ~~~~~~~~~~~~~~~
+
+  src/app/journal/journal.component 2.ts:6:16
+    6   templateUrl: './journal.component.html'
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component JournalComponent.
+
+
+Error: src/app/journal/journal.component.html:11:63 - error TS2339: Property 'message' does not exist on type 'JournalComponent'.
+
+11 <div *ngIf="message" style="color: green; margin: 10px 0;">{{ message }}</div>
+                                                                 ~~~~~~~
+
+  src/app/journal/journal.component 2.ts:6:16
+    6   templateUrl: './journal.component.html'
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component JournalComponent.
+
+
+Error: src/app/journal/journal.component.html:12:59 - error TS2339: Property 'error' does not exist on type 'JournalComponent'.
+
+12 <div *ngIf="error" style="color: red; margin: 10px 0;">{{ error }}</div>
+                                                             ~~~~~
+
+  src/app/journal/journal.component 2.ts:6:16
+    6   templateUrl: './journal.component.html'
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component JournalComponent.
+
+
+Error: src/app/journal/journal.component.html:16:36 - error NG8004: No pipe found with name 'date'.
+
+16     <strong>{{ journal.createdAt | date:'short' }}</strong> - {{ journal.content }}
+                                      ~~~~
+
+  src/app/journal/journal.component 2.ts:6:16
+    6   templateUrl: './journal.component.html'
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component JournalComponent.
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime |  6.49 kB |
+
+4 unchanged chunks
+
+Build at: 2025-07-17T21:34:56.235Z - Hash: 8c52d1d31a70deb4 - Time: 351ms
 
 ✔ Compiled successfully.
 ✔ Browser application bundle generation complete.
 
 Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 40.34 kB |
+main.js             | main    | 47.71 kB |
 runtime.js          | runtime |  6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T19:49:25.277Z - Hash: 60d629087a071e69 - Time: 1436ms
+Build at: 2025-07-17T21:35:02.054Z - Hash: b9e2959d0eec1ae0 - Time: 407ms
 
 ✔ Compiled successfully.
 ✔ Browser application bundle generation complete.
 
 Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 40.51 kB |
+main.js             | main    | 47.96 kB |
 runtime.js          | runtime |  6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T19:49:34.245Z - Hash: d12d14875d765707 - Time: 340ms
+Build at: 2025-07-17T21:42:28.358Z - Hash: b435cda18fe19e76 - Time: 1049ms
 
 ✔ Compiled successfully.
 ✔ Browser application bundle generation complete.
 
 Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 40.56 kB |
+main.js             | main    | 50.06 kB |
 runtime.js          | runtime |  6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T20:08:43.443Z - Hash: 69e9253cd472abdf - Time: 1132ms
+Build at: 2025-07-17T22:14:00.030Z - Hash: 4b2bb19c925ce68a - Time: 568ms
 
 ✔ Compiled successfully.
 ✔ Browser application bundle generation complete.
 
 Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 40.79 kB |
+main.js             | main    | 50.80 kB |
 runtime.js          | runtime |  6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T20:10:08.649Z - Hash: 1ac5f624702b055d - Time: 1001ms
+Build at: 2025-07-17T22:14:19.165Z - Hash: 65255bced18f7b3e - Time: 439ms
 
 ✔ Compiled successfully.
 ✔ Browser application bundle generation complete.
 
 Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 41.11 kB |
+main.js             | main    | 52.77 kB |
 runtime.js          | runtime |  6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T20:10:21.428Z - Hash: eb10c4d3c3cecb7a - Time: 426ms
+Build at: 2025-07-17T22:14:39.420Z - Hash: 56a5e098ff300d9e - Time: 245ms
 
 ✔ Compiled successfully.
 ✔ Browser application bundle generation complete.
 
 Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 43.15 kB |
+main.js             | main    | 53.53 kB |
 runtime.js          | runtime |  6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T20:10:42.847Z - Hash: a6605f118a0a5f99 - Time: 255ms
+Build at: 2025-07-17T22:14:48.146Z - Hash: e2f1549c15aad91e - Time: 304ms
 
 ✔ Compiled successfully.
 ✔ Browser application bundle generation complete.
 
 Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 43.73 kB |
+main.js             | main    | 55.55 kB |
 runtime.js          | runtime |  6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T20:10:58.012Z - Hash: 22a7578b283cb0ab - Time: 625ms
+Build at: 2025-07-17T22:41:12.956Z - Hash: 0bf8cf2c2676416c - Time: 1015ms
+
+Error: src/app/app.component.html:9:36 - error TS2339: Property 'showNavigation' does not exist on type 'AppComponent'.
+
+9       <nav class="main-nav" *ngIf="showNavigation()">
+                                     ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.component.html:22:37 - error TS2339: Property 'showNavigation' does not exist on type 'AppComponent'.
+
+22   <footer class="app-footer" *ngIf="showNavigation()">
+                                       ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 56.27 kB |
+runtime.js          | runtime |  6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-17T22:41:20.072Z - Hash: 565dcc267b0fa82b - Time: 415ms
+
+Error: src/app/app.component.ts:17:18 - error TS2769: No overload matches this call.
+  Overload 1 of 3, '(observer?: Partial<Observer<Event_2>> | undefined): Subscription', gave the following error.
+    Type '(event: NavigationEnd) => void' has no properties in common with type 'Partial<Observer<Event_2>>'.
+  Overload 2 of 3, '(next: (value: Event_2) => void): Subscription', gave the following error.
+    Argument of type '(event: NavigationEnd) => void' is not assignable to parameter of type '(value: Event_2) => void'.
+      Types of parameters 'event' and 'value' are incompatible.
+        Type 'Event_2' is not assignable to type 'NavigationEnd'.
+          Type 'RouterEvent' is missing the following properties from type 'NavigationEnd': urlAfterRedirects, type
+  Overload 3 of 3, '(next?: ((value: Event_2) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription', gave the following error.
+    Argument of type '(event: NavigationEnd) => void' is not assignable to parameter of type '(value: Event_2) => void'.
+      Types of parameters 'event' and 'value' are incompatible.
+        Type 'Event_2' is not assignable to type 'NavigationEnd'.
+
+17       .subscribe((event: NavigationEnd) => {
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 63.89 kB |
+runtime.js          | runtime |  6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-17T22:42:00.470Z - Hash: b15a466226d34408 - Time: 1115ms
+
+Error: src/app/app.component.ts:17:18 - error TS2769: No overload matches this call.
+  Overload 1 of 3, '(observer?: Partial<Observer<Event_2>> | undefined): Subscription', gave the following error.
+    Type '(event: NavigationEnd) => void' has no properties in common with type 'Partial<Observer<Event_2>>'.
+  Overload 2 of 3, '(next: (value: Event_2) => void): Subscription', gave the following error.
+    Argument of type '(event: NavigationEnd) => void' is not assignable to parameter of type '(value: Event_2) => void'.
+      Types of parameters 'event' and 'value' are incompatible.
+        Type 'Event_2' is not assignable to type 'NavigationEnd'.
+          Type 'RouterEvent' is missing the following properties from type 'NavigationEnd': urlAfterRedirects, type
+  Overload 3 of 3, '(next?: ((value: Event_2) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription', gave the following error.
+    Argument of type '(event: NavigationEnd) => void' is not assignable to parameter of type '(value: Event_2) => void'.
+      Types of parameters 'event' and 'value' are incompatible.
+        Type 'Event_2' is not assignable to type 'NavigationEnd'.
+
+17       .subscribe((event: NavigationEnd) => {
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 63.93 kB |
+runtime.js          | runtime |  6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-17T22:42:09.726Z - Hash: 96180f19aa8dde7f - Time: 304ms
+
+Error: src/app/app.component.ts:15:5 - error TS2769: No overload matches this call.
+  Overload 1 of 3, '(observer?: Partial<Observer<Event_2>> | undefined): Subscription', gave the following error.
+    Type '(event: NavigationEnd) => void' is not assignable to type '(value: Event_2) => void'.
+      Types of parameters 'event' and 'value' are incompatible.
+        Type 'Event_2' is not assignable to type 'NavigationEnd'.
+          Type 'RouterEvent' is missing the following properties from type 'NavigationEnd': urlAfterRedirects, type
+  Overload 2 of 3, '(next: (value: Event_2) => void): Subscription', gave the following error.
+    Argument of type '{ next: (event: NavigationEnd) => void; }' is not assignable to parameter of type '(value: Event_2) => void'.
+      Object literal may only specify known properties, and 'next' does not exist in type '(value: Event_2) => void'.
+  Overload 3 of 3, '(next?: ((value: Event_2) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription', gave the following error.
+    Argument of type '{ next: (event: NavigationEnd) => void; }' is not assignable to parameter of type '(value: Event_2) => void'.
+      Object literal may only specify known properties, and 'next' does not exist in type '(value: Event_2) => void'.
+
+ 15     this.router.events
+        ~~~~~~~~~~~~~~~~~~
+ 16       .pipe(filter(event => event instanceof NavigationEnd))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 20         }
+    ~~~~~~~~~
+ 21       });
+    ~~~~~~~~
+
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 62.12 kB |
+runtime.js          | runtime |  6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-17T22:42:28.537Z - Hash: 5be838ae843667a6 - Time: 284ms
+
+Error: src/app/app.component.ts:15:5 - error TS2769: No overload matches this call.
+  Overload 1 of 3, '(observer?: Partial<Observer<Event_2>> | undefined): Subscription', gave the following error.
+    Type '(event: NavigationEnd) => void' is not assignable to type '(value: Event_2) => void'.
+      Types of parameters 'event' and 'value' are incompatible.
+        Type 'Event_2' is not assignable to type 'NavigationEnd'.
+          Type 'RouterEvent' is missing the following properties from type 'NavigationEnd': urlAfterRedirects, type
+  Overload 2 of 3, '(next: (value: Event_2) => void): Subscription', gave the following error.
+    Argument of type '{ next: (event: NavigationEnd) => void; }' is not assignable to parameter of type '(value: Event_2) => void'.
+      Object literal may only specify known properties, and 'next' does not exist in type '(value: Event_2) => void'.
+  Overload 3 of 3, '(next?: ((value: Event_2) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription', gave the following error.
+    Argument of type '{ next: (event: NavigationEnd) => void; }' is not assignable to parameter of type '(value: Event_2) => void'.
+      Object literal may only specify known properties, and 'next' does not exist in type '(value: Event_2) => void'.
+
+ 15     this.router.events
+        ~~~~~~~~~~~~~~~~~~
+ 16       .pipe(filter(event => event instanceof NavigationEnd))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 20         }
+    ~~~~~~~~~
+ 21       });
+    ~~~~~~~~
+
+
+
+
+
+✖ Failed to compile.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 61.38 kB |
+runtime.js          | runtime |  6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-17T22:42:36.319Z - Hash: ae6412dcd5f912db - Time: 275ms
 
 ✔ Compiled successfully.
 ✔ Browser application bundle generation complete.
 
 Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 43.83 kB |
+main.js             | main    | 63.69 kB |
 runtime.js          | runtime |  6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T20:11:11.829Z - Hash: 660380b3a86571ff - Time: 404ms
+Build at: 2025-07-17T22:42:57.982Z - Hash: 13882701d4d08f76 - Time: 227ms
 
 ✔ Compiled successfully.
 ✔ Browser application bundle generation complete.
 
 Initial Chunk Files | Names   | Raw Size
-main.js             | main    | 44.42 kB |
+main.js             | main    | 68.43 kB |
 runtime.js          | runtime |  6.49 kB |
 
 3 unchanged chunks
 
-Build at: 2025-07-17T20:11:26.717Z - Hash: 3363d69a9563c5e2 - Time: 247ms
+Build at: 2025-07-17T23:01:33.621Z - Hash: a0e699f9808d2846 - Time: 694ms
+
+✔ Compiled successfully.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files | Names   | Raw Size
+main.js             | main    | 74.88 kB |
+runtime.js          | runtime |  6.49 kB |
+
+3 unchanged chunks
+
+Build at: 2025-07-17T23:02:49.355Z - Hash: 0853835c5ae38f48 - Time: 361ms
 
 ✔ Compiled successfully.
