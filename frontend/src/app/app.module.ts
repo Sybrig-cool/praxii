@@ -10,13 +10,17 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { JournalComponent } from './journal/journal.component';
 import { JwtInterceptor } from './auth/jwt-interceptor';
+import { EmailVerificationComponent } from './auth/email-verification/email-verification.component';
+import { JournalArchiveComponent } from './journal/journal-archive/journal-archive.component';
 @NgModule({
   declarations: [
     AppComponent,
     HealthCheckComponent,
     LoginComponent,
     SignupComponent,
-    JournalComponent
+    JournalComponent,
+    EmailVerificationComponent,
+    JournalArchiveComponent
   ],
   imports: [
     BrowserModule,

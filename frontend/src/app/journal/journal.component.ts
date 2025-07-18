@@ -62,4 +62,33 @@ export class JournalComponent implements OnInit {
     this.authService.logout();
     this.router.navigate(['/login']);
   }
+
+  getCurrentYear(): number {
+    return new Date().getFullYear();
+  }
+
+  getCurrentMonth(): number {
+    return new Date().getMonth() + 1;
+  }
+
+  getRecentMonths(): Array<{year: number, month: number, name: string}> {
+    const months = [];
+    const now = new Date();
+    
+    for (let i = 1; i <= 6; i++) {
+      const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
+      const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+      
+      months.push({
+        year: date.getFullYear(),
+        month: date.getMonth() + 1,
+        name: monthNames[date.getMonth()]
+      });
+    }
+    
+    return months;
+  }
 }

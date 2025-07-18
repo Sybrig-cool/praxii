@@ -24,4 +24,8 @@ export class JournalService {
   createJournal(content: string): Observable<string> {
     return this.http.post(this.apiUrl, { content }, { responseType: 'text' });
   }
+
+  getJournalsByDate(year: number, month: number): Observable<Journal[]> {
+    return this.http.get<Journal[]>(`${this.apiUrl}/archive?year=${year}&month=${month}`);
+  }
 }

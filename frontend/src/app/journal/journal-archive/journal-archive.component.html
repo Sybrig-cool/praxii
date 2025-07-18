@@ -1,0 +1,134 @@
+<div class="container mt-4">
+  <!-- Header with Navigation -->
+  <div class="row mb-4">
+    <div class="col">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2 class="mb-0">
+          <i class="bi bi-journal-bookmark-fill me-2 text-primary"></i>
+          Spiritual Journal Archive
+        </h2>
+        <button (click)="router.navigate(['/dashboard'])" class="btn btn-outline-primary">
+          <i class="bi bi-arrow-left me-2"></i>Back to Dashboard
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Month Navigation -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <button (click)="goToPreviousMonth()" class="btn btn-outline-secondary">
+              <i class="bi bi-chevron-left me-2"></i>Previous Month
+            </button>
+            
+            <h4 class="mb-0 text-center">
+              <i class="bi bi-calendar3 me-2"></i>
+              {{ monthName }} {{ currentYear }}
+            </h4>
+            
+            <button (click)="goToNextMonth()" class="btn btn-outline-secondary">
+              Next Month<i class="bi bi-chevron-right ms-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading State -->
+  <div *ngIf="loading" class="text-center py-5">
+    <div class="spinner-border text-primary mb-3" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="text-muted">Loading your spiritual reflections...</p>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="error && !loading" class="alert alert-danger">
+    <i class="bi bi-exclamation-triangle me-2"></i>{{ error }}
+  </div>
+
+  <!-- No Entries -->
+  <div *ngIf="journals.length === 0 && !loading && !error" class="text-center py-5">
+    <i class="bi bi-journal-x display-4 mb-3 text-muted"></i>
+    <h5 class="text-muted">No journal entries found</h5>
+    <p class="text-muted">You didn't write any entries in {{ monthName }} {{ currentYear }}.</p>
+    <button (click)="router.navigate(['/dashboard'])" class="btn btn-primary">
+      <i class="bi bi-plus-lg me-2"></i>Start Writing Today
+    </button>
+  </div>
+
+  <!-- Journal Entries -->
+  <div *ngIf="journals.length > 0 && !loading" class="row">
+    <div class="col-12">
+      <h5 class="mb-3">
+        <i class="bi bi-book me-2"></i>
+        {{ journals.length }} entries in {{ monthName }} {{ currentYear }}
+      </h5>
+      
+      <div class="list-group">
+        <div 
+          *ngFor="let journal of journals; let i = index" 
+          class="list-group-item list-group-item-action border mb-3"
+        >
+          <div class="card-body p-3">
+            <div class="d-flex w-100 justify-content-between align-items-start mb-3">
+              <small class="text-primary fw-bold">
+                <i class="bi bi-calendar3 me-1"></i>
+                {{ journal.createdAt | date:'EEEE, MMMM d, y \'at\' h:mm a' }}
+              </small>
+              <span class="badge bg-light text-dark">
+                Entry #{{ journals.length - i }}
+              </span>
+            </div>
+            
+            <div class="entry-content">
+              <p class="mb-2">{{ journal.content }}</p>
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <small class="text-muted">
+                <i class="bi bi-chat-text me-1"></i>
+                {{ journal.content.split(' ').length }} words
+              </small>
+              <small class="text-muted">
+                <i class="bi bi-heart me-1"></i>
+                Spiritual reflection
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monthly Summary (if entries exist) -->
+  <div *ngIf="journals.length > 0 && !loading" class="row mt-4">
+    <div class="col-12">
+      <div class="card bg-light">
+        <div class="card-body">
+          <h6 class="card-title">
+            <i class="bi bi-graph-up me-2"></i>Monthly Summary
+          </h6>
+          <div class="row text-center">
+            <div class="col-4">
+              <div class="fw-bold text-primary">{{ journals.length }}</div>
+              <small class="text-muted">Total Entries</small>
+            </div>
+            <div class="col-4">
+              <div class="fw-bold text-success">{{ getTotalWords() }}</div>
+              <small class="text-muted">Total Words</small>
+            </div>
+            <div class="col-4">
+              <div class="fw-bold text-info">{{ getAverageWords() }}</div>
+              <small class="text-muted">Avg Words/Entry</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

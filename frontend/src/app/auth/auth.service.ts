@@ -30,4 +30,12 @@ export class AuthService {
   logout() {
     localStorage.removeItem('jwt');
   }
+
+  verifyEmail(token: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/verify-email?token=${token}`, { responseType: 'text' });
+  }
+
+  resendVerification(email: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/resend-verification`, { email }, { responseType: 'text' });
+  }
 }
