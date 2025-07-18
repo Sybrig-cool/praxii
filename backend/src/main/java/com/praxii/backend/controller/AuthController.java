@@ -2,9 +2,11 @@ package com.praxii.backend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.praxii.backend.model.User;
@@ -23,7 +25,7 @@ public class AuthController {
     public ResponseEntity<?> registerUser(@RequestBody SignupRequest request) {
         try {
             User user = userService.registerUser(request.getUsername(), request.getEmail(), request.getPassword());
-            return ResponseEntity.ok("User registered successfully");
+            return ResponseEntity.ok("User registered successfully. Please check your email to verify your account.");
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
@@ -38,8 +40,36 @@ public class AuthController {
             return ResponseEntity.badRequest().body("Invalid email or password");
         }
 
+        if (!user.isEmailVerified()) {
+            return ResponseEntity.badRequest().body("Please verify your email before logging in");
+        }
+
         String token = jwtUtil.generateToken(user.getUsername());
         return ResponseEntity.ok(new JwtResponse(token, user.getUsername(), user.getEmail()));
+    }
+
+    @GetMapping("/verify-email")
+    public ResponseEntity<?> verifyEmail(@RequestParam String token) {
+        try {
+            boolean verified = userService.verifyEmail(token);
+            if (verified) {
+                return ResponseEntity.ok("Email verified successfully");
+            } else {
+                return ResponseEntity.badRequest().body("Invalid or expired verification token");
+            }
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @PostMapping("/resend-verification")
+    public ResponseEntity<?> resendVerification(@RequestBody ResendVerificationRequest request) {
+        try {
+            userService.resendVerificationEmail(request.getEmail());
+            return ResponseEntity.ok("Verification email sent successfully");
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     // DTO classes for requests and responses
@@ -110,5 +140,13 @@ public static class JwtResponse {
     public String getEmail() { return email; }
 }
 
+public static class ResendVerificationRequest {
+    private String email;
+
+    public ResendVerificationRequest() {}
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+}
 
 }

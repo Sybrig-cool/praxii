@@ -13,6 +13,9 @@ public class User {
     private String username;
     private String email;
     private String password;
+    private boolean emailVerified = false;
+    private String verificationToken;
+    private Instant tokenExpiresAt;
     private Instant createdAt;
     private Instant updatedAt;
 
@@ -22,6 +25,7 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.emailVerified = false;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
@@ -43,5 +47,14 @@ public class User {
 
     public Instant getUpdatedAt() { return updatedAt; }
     public void setUpdatedAt(Instant updatedAt) { this.updatedAt = updatedAt; }
+
+    public boolean isEmailVerified() { return emailVerified; }
+    public void setEmailVerified(boolean emailVerified) { this.emailVerified = emailVerified; }
+
+    public String getVerificationToken() { return verificationToken; }
+    public void setVerificationToken(String verificationToken) { this.verificationToken = verificationToken; }
+
+    public Instant getTokenExpiresAt() { return tokenExpiresAt; }
+    public void setTokenExpiresAt(Instant tokenExpiresAt) { this.tokenExpiresAt = tokenExpiresAt; }
 
 }

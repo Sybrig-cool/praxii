@@ -2,6 +2,9 @@ package com.praxii.backend.controller;
 
 import java.security.Principal;
 import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,6 +18,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -66,5 +70,35 @@ public class JournalController {
                 .map(j -> new JournalResponse(j.getId(), j.getContent(), j.getCreatedAt()))
                 .collect(Collectors.toList());
         return ResponseEntity.ok(response);
+    }
+
+    // Get journals for a specific month/year
+    @GetMapping("/archive")
+    public ResponseEntity<List<JournalResponse>> getJournalsByDate(
+            @RequestParam int year,
+            @RequestParam int month,
+            Principal principal) {
+        try {
+            User user = userRepository.findByUsername(principal.getName())
+                    .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED));
+            
+            // Create start and end dates for the month
+            LocalDate startDate = LocalDate.of(year, month, 1);
+            LocalDate endDate = startDate.plusMonths(1);
+            
+            Instant startInstant = startDate.atStartOfDay().toInstant(ZoneOffset.UTC);
+            Instant endInstant = endDate.atStartOfDay().toInstant(ZoneOffset.UTC);
+            
+            List<Journal> journals = journalRepository.findByUserIdAndCreatedAtBetweenOrderByCreatedAtDesc(
+                    user.getId(), startInstant, endInstant);
+            
+            List<JournalResponse> response = journals.stream()
+                    .map(j -> new JournalResponse(j.getId(), j.getContent(), j.getCreatedAt()))
+                    .collect(Collectors.toList());
+            
+            return ResponseEntity.ok(response);
+        } catch (DateTimeParseException e) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid date format");
+        }
     }
 }
