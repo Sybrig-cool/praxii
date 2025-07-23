@@ -51,4 +51,14 @@ public class JwtUtil {
         }
         return false;
     }
+
+    public String extractUsername(String token) {
+        return getUsernameFromToken(token);
+    }
+
+    public String extractUserId(String token) {
+        // For now, we'll use username as user ID since our User model doesn't have separate ID field exposed
+        // In a real app, you might store user ID in JWT claims
+        return getUsernameFromToken(token);
+    }
 }

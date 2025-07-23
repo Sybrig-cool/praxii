@@ -177,4 +177,21 @@ public class UserService {
         userRepository.save(user);
         return true;
     }
+
+    public boolean manualVerifyEmail(String email) {
+        Optional<User> userOptional = userRepository.findByEmail(email);
+        
+        if (userOptional.isEmpty()) {
+            return false;
+        }
+        
+        User user = userOptional.get();
+        user.setEmailVerified(true);
+        user.setVerificationToken(null); // Clear the token
+        user.setTokenExpiresAt(null); // Clear expiration
+        user.setUpdatedAt(Instant.now());
+        
+        userRepository.save(user);
+        return true;
+    }
 }
